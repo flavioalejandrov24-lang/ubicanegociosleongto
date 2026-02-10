@@ -55,6 +55,8 @@ body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #ff
 .register-link:hover { color: #1d4ed8; text-decoration: underline; }
 .icon-location { color: rgba(59, 130, 246, 0.95); }
 .icon-phone { color: rgba(34, 197, 94, 0.95); }
+.icon-clock-blue { color: rgba(59, 130, 246, 0.8); filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.3)); }
+.icon-calendar-yellow { color: rgba(212, 175, 55, 0.8); filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3)); }
 .rating-badge { background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); border-radius: 20px; padding: 8px 16px; }
 .business-card-footer { background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 1)); box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.08); border-radius: 0 0 24px 24px; }
 .header-gold { background: linear-gradient(135deg, #d4af37 0%, #ffffff 100%); }
@@ -87,217 +89,270 @@ body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #ff
 .star-rating-btn:active { transform: scale(1.1); }
 /* Nuevos estilos para el chat IA */
 .ai-chat-modal {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 400px;
-    max-height: 600px;
-    z-index: 9999;
-    animation: slideUp 0.4s ease-out;
+position: fixed;
+bottom: 20px;
+left: 50%;
+transform: translateX(-50%);
+width: 400px;
+max-height: 600px;
+z-index: 9999;
+animation: slideUp 0.4s ease-out;
 }
 @keyframes slideUp {
-    from { opacity: 0; transform: translateX(-50%) translateY(50px) scale(0.9); }
-    to { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+from { opacity: 0; transform: translateX(-50%) translateY(50px) scale(0.9); }
+to { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
 }
 .ai-chat-header {
-    background: linear-gradient(135deg, #000000 0%, #333333 100%);
-    padding: 16px 20px;
-    border-radius: 16px 16px 0 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: move;
+background: linear-gradient(135deg, #000000 0%, #333333 100%);
+padding: 16px 20px;
+border-radius: 16px 16px 0 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+cursor: move;
 }
 .ai-chat-header h3 {
-    color: #FFD700;
-    font-weight: 700;
-    font-size: 18px;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+color: #FFD700;
+font-weight: 700;
+font-size: 18px;
+text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
 }
 .ai-chat-header .close-btn {
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    color: #FFD700;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s ease;
+background: rgba(255, 255, 255, 0.1);
+border: none;
+color: #FFD700;
+width: 32px;
+height: 32px;
+border-radius: 50%;
+cursor: pointer;
+transition: all 0.3s ease;
 }
 .ai-chat-header .close-btn:hover {
-    background: rgba(255, 215, 0, 0.2);
-    transform: rotate(90deg);
+background: rgba(255, 215, 0, 0.2);
+transform: rotate(90deg);
 }
 .ai-chat-messages {
-    background: rgba(0, 0, 0, 0.95);
-    padding: 20px;
-    max-height: 300px;
-    overflow-y: auto;
-    border-left: 2px solid #FFD700;
-    border-right: 2px solid #FFD700;
+background: rgba(0, 0, 0, 0.95);
+padding: 20px;
+max-height: 300px;
+overflow-y: auto;
+border-left: 2px solid #FFD700;
+border-right: 2px solid #FFD700;
 }
 .ai-message {
-    margin-bottom: 16px;
-    padding: 12px 16px;
-    border-radius: 12px;
-    max-width: 90%;
-    word-wrap: break-word;
+margin-bottom: 16px;
+padding: 12px 16px;
+border-radius: 12px;
+max-width: 90%;
+word-wrap: break-word;
 }
 .ai-message.user {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-    color: white;
-    margin-left: auto;
-    border-top-right-radius: 4px;
+background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+color: white;
+margin-left: auto;
+border-top-right-radius: 4px;
 }
 .ai-message.bot {
-    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
-    color: #FFD700;
-    border-top-left-radius: 4px;
-    border-left: 3px solid #FFD700;
+background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+color: #FFD700;
+border-top-left-radius: 4px;
+border-left: 3px solid #FFD700;
 }
 .ai-chat-input {
-    background: linear-gradient(135deg, #000000 0%, #333333 100%);
-    padding: 16px;
-    border-radius: 0 0 16px 16px;
+background: linear-gradient(135deg, #000000 0%, #333333 100%);
+padding: 16px;
+border-radius: 0 0 16px 16px;
 }
 .ai-chat-input textarea {
-    width: 100%;
-    padding: 12px 16px;
-    border: 2px solid #FFD700;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    resize: none;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    transition: all 0.3s ease;
+width: 100%;
+padding: 12px 16px;
+border: 2px solid #FFD700;
+border-radius: 12px;
+background: rgba(255, 255, 255, 0.1);
+color: white;
+resize: none;
+font-family: 'Inter', sans-serif;
+font-size: 14px;
+transition: all 0.3s ease;
 }
 .ai-chat-input textarea:focus {
-    outline: none;
-    border-color: #FFD700;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+outline: none;
+border-color: #FFD700;
+box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
 }
 .ai-chat-input textarea::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+color: rgba(255, 255, 255, 0.5);
 }
 .ai-chat-actions {
-    display: flex;
-    gap: 12px;
-    margin-top: 12px;
+display: flex;
+gap: 12px;
+margin-top: 12px;
 }
 .ai-chat-actions button {
-    flex: 1;
-    padding: 12px 16px;
-    border: none;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+flex: 1;
+padding: 12px 16px;
+border: none;
+border-radius: 12px;
+font-weight: 700;
+font-size: 14px;
+cursor: pointer;
+transition: all 0.3s ease;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
 }
 .ai-chat-actions .btn-send {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-    color: white;
+background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+color: white;
 }
 .ai-chat-actions .btn-send:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+transform: translateY(-2px);
+box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
 }
 .ai-chat-actions .btn-start {
-    background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
-    color: white;
+background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+color: white;
 }
 .ai-chat-actions .btn-start:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4);
+transform: translateY(-2px);
+box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4);
 }
 .ai-chat-actions .btn-start i {
-    animation: pulse-gold 2s infinite;
+animation: pulse-gold 2s infinite;
 }
 @keyframes pulse-gold {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; transform: scale(1.1); }
+0%, 100% { opacity: 1; }
+50% { opacity: 0.5; transform: scale(1.1); }
 }
 .ai-chat-input .file-upload {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 12px;
+display: flex;
+align-items: center;
+gap: 12px;
+margin-top: 12px;
 }
 .ai-chat-input .file-upload label {
-    background: rgba(255, 215, 0, 0.2);
-    color: #FFD700;
-    padding: 8px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 12px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 215, 0, 0.3);
+background: rgba(255, 215, 0, 0.2);
+color: #FFD700;
+padding: 8px 16px;
+border-radius: 8px;
+cursor: pointer;
+font-size: 12px;
+transition: all 0.3s ease;
+border: 1px solid rgba(255, 215, 0, 0.3);
 }
 .ai-chat-input .file-upload label:hover {
-    background: rgba(255, 215, 0, 0.3);
-    transform: translateY(-1px);
+background: rgba(255, 215, 0, 0.3);
+transform: translateY(-1px);
 }
 .ai-chat-input .file-upload input {
-    display: none;
+display: none;
 }
 .ai-chat-input .file-preview {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 8px 12px;
-    border-radius: 8px;
-    margin-top: 8px;
-    border: 1px solid rgba(255, 215, 0, 0.2);
+display: flex;
+align-items: center;
+gap: 8px;
+background: rgba(255, 255, 255, 0.1);
+padding: 8px 12px;
+border-radius: 8px;
+margin-top: 8px;
+border: 1px solid rgba(255, 215, 0, 0.2);
 }
 .ai-chat-input .file-preview img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 6px;
+width: 40px;
+height: 40px;
+object-fit: cover;
+border-radius: 6px;
 }
 .ai-chat-input .file-preview .remove-file {
-    background: rgba(255, 0, 0, 0.3);
-    color: white;
-    border: none;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 12px;
+background: rgba(255, 0, 0, 0.3);
+color: white;
+border: none;
+width: 24px;
+height: 24px;
+border-radius: 50%;
+cursor: pointer;
+font-size: 12px;
 }
 .ai-loading {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 3px solid rgba(255, 215, 0, 0.3);
-    border-top-color: #FFD700;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+display: inline-block;
+width: 20px;
+height: 20px;
+border: 3px solid rgba(255, 215, 0, 0.3);
+border-top-color: #FFD700;
+border-radius: 50%;
+animation: spin 1s linear infinite;
 }
 @keyframes spin {
-    to { transform: rotate(360deg); }
+to { transform: rotate(360deg); }
 }
 .ai-chat-modal.minimized {
-    width: 280px;
-    height: 60px;
-    max-height: 60px;
+width: 280px;
+height: 60px;
+max-height: 60px;
 }
 .ai-chat-modal.minimized .ai-chat-messages,
 .ai-chat-modal.minimized .ai-chat-input {
-    display: none;
+display: none;
 }
 .ai-chat-modal.minimized .ai-chat-header {
-    border-radius: 16px;
+border-radius: 16px;
 }
 .ai-chat-modal.minimized .ai-chat-header h3 {
-    font-size: 14px;
+font-size: 14px;
+}
+/* Estilos para botones compactos */
+.btn-compact {
+    padding: 10px 16px;
+    min-width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+.btn-compact:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.btn-cancel {
+    background: rgba(185, 28, 28, 0.8);
+    color: white;
+    border: 2px solid rgba(185, 28, 28, 0.9);
+}
+.btn-cancel:hover {
+    background: rgba(185, 28, 28, 1);
+    border-color: rgba(220, 38, 38, 1);
+}
+.btn-clean {
+    background: rgba(255, 215, 0, 0.3);
+    color: #1a1a1a;
+    border: 2px solid rgba(255, 215, 0, 0.5);
+}
+.btn-clean:hover {
+    background: rgba(255, 215, 0, 0.5);
+    border-color: rgba(255, 215, 0, 0.8);
+}
+.btn-autofill {
+    background: rgba(0, 0, 0, 0.8);
+    color: #FFD700;
+    border: 2px solid rgba(255, 215, 0, 0.5);
+}
+.btn-autofill:hover {
+    background: rgba(30, 30, 30, 0.9);
+    border-color: rgba(255, 215, 0, 0.8);
+}
+.btn-save {
+    background: rgba(34, 197, 94, 0.8);
+    color: white;
+    border: 2px solid rgba(34, 197, 94, 0.9);
+}
+.btn-save:hover {
+    background: rgba(34, 197, 94, 1);
+    border-color: rgba(22, 163, 74, 1);
 }
 </style>
 </head>
@@ -308,7 +363,62 @@ body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #ff
 const SUPABASE_URL = 'https://igastcafgjwijvgvcclr.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlnYXN0Y2FmZ2p3aWp2Z3ZjY2xyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg1ODkzMjMsImV4cCI6MjA4NDE2NTMyM30.GQxFvm76xHzKj3px7HBtehi5EOOpSQvqk26DAkt2Tz4';
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {auth: { autoRefreshToken: true, persistSession: true, detectSessionInUrl: true, storage: window.localStorage, storageKey: 'ubicanegoleon-v4' }});
-let state = {view: 'login', user: null, businesses: [], currentBusiness: null, searchTerm: '', tempSearchTerm: '', viewCount: 1800, keepLoggedIn: false, selectedRating: 0, showPassword: {}, isPasswordReset: false, lastAuthError: null, authAttempts: 0, enableHours: false, showCustomDays: false, formData: { name: '', representative: '', category: '', street: '', colony: '', phone: '', hours: 'No definido', days: 'No definido', description: '', services: '', logo: null, logo_url: '', agreed: false}, aiChatOpen: false, aiMessages: [], aiLoading: false, aiImage: null, aiImagePreview: null, aiExtractedData: null};
+
+// Estado optimizado - eliminados campos obsoletos
+let state = {
+    view: 'login',
+    user: null,
+    businesses: [],
+    currentBusiness: null,
+    searchTerm: '',
+    tempSearchTerm: '',
+    viewCount: 1800,
+    keepLoggedIn: false,
+    selectedRating: 0,
+    showPassword: {},
+    isPasswordReset: false,
+    lastAuthError: null,
+    authAttempts: 0,
+    formData: {
+        name: '',
+        representative: '',
+        category: '',
+        street: '',
+        colony: '',
+        phone: '',
+        hours: 'No definido',
+        days: 'No definido',
+        description: '',
+        services: '',
+        logo: null,
+        logo_url: '',
+        agreed: false
+    },
+    aiChatOpen: false,
+    aiMessages: [],
+    aiLoading: false,
+    aiImage: null,
+    aiImagePreview: null,
+    aiExtractedData: null
+};
+
+// Función para limpiar memoria y caché
+function cleanupMemory() {
+    // Limpiar referencias grandes
+    if (state.businesses && state.businesses.length > 50) {
+        state.businesses = state.businesses.slice(0, 50);
+    }
+    
+    // Limpiar cache de imágenes
+    if (state.formData.logo_url && state.formData.logo_url.length > 1000000) {
+        state.formData.logo_url = null;
+    }
+    
+    // Limpiar mensajes del chat IA si son muchos
+    if (state.aiMessages && state.aiMessages.length > 20) {
+        state.aiMessages = state.aiMessages.slice(-20);
+    }
+}
 
 // Función para mostrar el chat IA
 function toggleAIChat() {
@@ -505,22 +615,192 @@ function stopDrag() {
 document.addEventListener('mousemove', drag);
 document.addEventListener('mouseup', stopDrag);
 
-function showModal(t,m,type='error'){const icons={error:{icon:'fa-exclamation-circle',color:'text-red-500',bg:'bg-red-500/10'},success:{icon:'fa-check-circle',color:'text-green-500',bg:'bg-green-500/10'},info:{icon:'fa-info-circle',color:'text-blue-500',bg:'bg-blue-500/10'},warning:{icon:'fa-exclamation-triangle',color:'text-yellow-500',bg:'bg-yellow-500/10'}};const s=icons[type]||icons.info;const modal=document.createElement('div');modal.className='modal-overlay fixed inset-0 z-50 flex items-center justify-center p-6';modal.innerHTML=`<div class="modal-content glass max-w-md w-full overflow-hidden shadow-2xl border-2 border-${type==='error'?'red':type==='success'?'green':'blue'}-500/30"><div class="${s.bg} p-6 border-b border-gray-300/50"><div class="flex items-center gap-4"><div class="w-16 h-16 rounded-full bg-white/50 flex items-center justify-center shadow-lg"><i class="fas ${s.icon} text-4xl ${s.color}"></i></div><h3 class="text-2xl font-bold text-gray-900">${t}</h3></div></div><div class="p-6"><p class="text-gray-700 leading-relaxed text-lg">${m}</p></div><div class="p-6 pt-0 flex gap-3"><button onclick="this.closest('.modal-overlay').remove()" class="flex-1 px-6 py-4 gradient-red text-white rounded-xl font-semibold transition-all hover:shadow-lg hover:scale-105">Cerrar</button></div></div>`;document.getElementById('modal-root').appendChild(modal);setTimeout(()=>modal.remove(),6000);}
-function showPasswordResetModal(){const modal=document.createElement('div');modal.className='modal-overlay fixed inset-0 z-50 flex items-center justify-center p-6';modal.innerHTML=`<div class="modal-content glass max-w-md w-full overflow-hidden shadow-2xl border-2 border-blue-500/30"><div class="bg-blue-500/10 p-6 border-b border-gray-300/50"><div class="flex items-center gap-4"><div class="w-16 h-16 rounded-full bg-white/50 flex items-center justify-center shadow-lg"><i class="fas fa-key text-4xl text-blue-500"></i></div><h3 class="text-2xl font-bold text-gray-900">Nueva Contraseña</h3></div></div><form id="password-reset-form" class="p-6 space-y-5"><p class="text-gray-600 mb-4 text-base">Establece tu nueva contraseña.</p><div><label class="block text-sm font-semibold text-gray-700 mb-2"><i class="fas fa-lock text-yellow-600 mr-2"></i>Nueva Contraseña</label><div class="relative"><input type="password" id="new-password-reset" required placeholder="Mínimo 6 caracteres" class="w-full px-5 py-4 pr-12 rounded-xl border-2 border-gray-300 bg-white text-gray-900 focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus transition-all"><button type="button" onclick="togglePasswordInModal('new-password-reset')" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-600 hover:text-yellow-600 transition-colors"><i class="fas fa-eye" id="icon-new-password-reset"></i></button></div></div><div><label class="block text-sm font-semibold text-gray-700 mb-2"><i class="fas fa-lock text-yellow-600 mr-2"></i>Confirmar Contraseña</label><div class="relative"><input type="password" id="confirm-new-password-reset" required placeholder="Repite la contraseña" class="w-full px-5 py-4 pr-12 rounded-xl border-2 border-gray-300 bg-white text-gray-900 focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus transition-all"><button type="button" onclick="togglePasswordInModal('confirm-new-password-reset')" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-600 hover:text-yellow-600 transition-colors"><i class="fas fa-eye" id="icon-confirm-new-password-reset"></i></button></div></div><div class="flex gap-3 pt-4"><button type="button" onclick="this.closest('.modal-overlay').remove(); logoutUser();" class="flex-1 px-6 py-4 gradient-red text-white rounded-xl font-semibold transition-all hover:shadow-lg hover:scale-105">Cancelar</button><button type="submit" class="flex-1 px-6 py-4 gradient-green text-white rounded-xl font-semibold transition-all hover:shadow-lg hover:scale-105">Cambiar</button></div></form></div>`;document.getElementById('modal-root').appendChild(modal);document.getElementById('password-reset-form').addEventListener('submit',async(e)=>{e.preventDefault();const n=document.getElementById('new-password-reset').value;const c=document.getElementById('confirm-new-password-reset').value;if(n!==c){showModal('Error','Las contraseñas no coinciden','error');return;}if(n.length<6){showModal('Error','Mínimo 6 caracteres','error');return;}try{const{error}=await supabaseClient.auth.updateUser({password:n});if(error)throw error;modal.remove();window.history.replaceState(null,'',window.location.pathname);showModal('¡Éxito!','Contraseña actualizada.','success');state.isPasswordReset=false;setTimeout(()=>logoutUser(),2000);}catch(error){showModal('Error',error.message,'error');}});}
-function showDeleteAccountModal(){const modal=document.createElement('div');modal.className='modal-overlay fixed inset-0 z-50 flex items-center justify-center p-6';modal.innerHTML=`<div class="modal-content glass max-w-md w-full overflow-hidden shadow-2xl border-2 border-red-500/30"><div class="bg-red-500/10 p-6 border-b border-gray-300/50"><div class="flex items-center gap-4"><div class="w-16 h-16 rounded-full bg-white/50 flex items-center justify-center shadow-lg"><i class="fas fa-exclamation-triangle text-4xl text-red-500"></i></div><h3 class="text-2xl font-bold text-gray-900">Eliminar Cuenta</h3></div></div><div class="p-6 space-y-4"><p class="text-gray-700 leading-relaxed text-lg font-semibold">⚠️ Acción permanente.</p><p class="text-gray-600">Se eliminará:</p><ul class="list-disc list-inside text-gray-600 space-y-2 ml-4"><li>Tu cuenta</li><li>Todos tus negocios</li><li>Todas tus reseñas</li></ul><div class="bg-yellow-500/10 border-2 border-yellow-500/30 rounded-xl p-4 mt-4"><p class="text-yellow-700 font-semibold text-sm"><i class="fas fa-info-circle mr-2"></i>Escribe "ELIMINAR"</p></div><input type="text" id="delete-confirmation-input" placeholder="Escribe ELIMINAR" class="w-full px-5 py-4 rounded-xl border-2 border-gray-300 bg-white text-gray-900 focus:border-red-500 focus:ring-4 focus:ring-red-500/20 outline-none input-focus transition-all"></div><div class="p-6 pt-0 flex gap-3"><button onclick="this.closest('.modal-overlay').remove()" class="flex-1 px-6 py-4 bg-gray-300 hover:bg-gray-400 text-gray-900 rounded-xl font-semibold transition-all hover:scale-105">Cancelar</button><button onclick="confirmDeleteAccount()" class="flex-1 px-6 py-4 gradient-red text-white rounded-xl font-semibold transition-all hover:scale-105 hover:shadow-lg"><i class="fas fa-trash mr-2"></i>Eliminar</button></div></div>`;document.getElementById('modal-root').appendChild(modal);}
-async function confirmDeleteAccount(){const i=document.getElementById('delete-confirmation-input');if(!i||i.value.toUpperCase()!=='ELIMINAR'){showModal('Confirmación Requerida','Escribe "ELIMINAR"','warning');return;}try{const u=state.user.id;await supabaseClient.from('reviews').delete().eq('user_id',u);await supabaseClient.from('businesses').delete().eq('user_id',u);await supabaseClient.auth.signOut();document.querySelector('.modal-overlay')?.remove();showModal('Cuenta Eliminada','Cuenta eliminada.','success');state.user=null;state.view='login';localStorage.clear();sessionStorage.clear();setTimeout(()=>render(),2000);}catch(error){showModal('Error','No se pudo eliminar.','error');}}
-function togglePasswordInModal(inputId){const input=document.getElementById(inputId);const icon=document.getElementById(`icon-${inputId}`);if(input&&icon){if(input.type==='password'){input.type='text';icon.className='fas fa-eye-slash';}else{input.type='password';icon.className='fas fa-eye';}}}
-function getAuthErrorMessage(error){const msg=error.message||'';if(msg.includes('User already registered')||msg.includes('already been registered'))return{title:'Usuario Existente',message:'Este correo ya está registrado.',type:'warning'};if(msg.includes('Invalid login credentials'))return{title:'Credenciales Incorrectas',message:'Correo o contraseña incorrectos.',type:'error'};if(msg.includes('Email not confirmed'))return{title:'Correo No Confirmado',message:'Confirma tu correo primero.',type:'info'};if(msg.includes('invalid format'))return{title:'Formato Inválido',message:'Formato del correo inválido.',type:'error'};if(msg.includes('Password should be at least 6'))return{title:'Contraseña Débil',message:'Mínimo 6 caracteres.',type:'error'};if(msg.includes('rate limit'))return{title:'Demasiados Intentos',message:'Espera unos minutos.',type:'warning'};return{title:'Error',message:msg||'Error inesperado.',type:'error'};}
-function isValidEmail(email){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);}
-async function loginUser(email,password){try{state.lastAuthError=null;const{data,error}=await supabaseClient.auth.signInWithPassword({email:email.toLowerCase().trim(),password});if(error){state.lastAuthError=error;state.authAttempts++;throw error;}state.user=data.user;state.authAttempts=0;return{success:true};}catch(error){return{success:false,error};}}
-async function registerUser(email,password,confirmPassword){try{state.lastAuthError=null;if(!isValidEmail(email))throw new Error('invalid format');if(password.length<6)throw new Error('Password should be at least 6 characters');if(password!==confirmPassword)throw new Error('Las contraseñas no coinciden');const{data,error}=await supabaseClient.auth.signUp({email:email.toLowerCase().trim(),password,options:{emailRedirectTo:`${window.location.origin}${window.location.pathname}`}});if(error){state.lastAuthError=error;throw error;}if(data.user&&data.user.identities&&data.user.identities.length===0)throw new Error('User already registered');return{success:true,requiresConfirmation:!data.session};}catch(error){return{success:false,error};}}
-async function logoutUser(){try{await supabaseClient.auth.signOut();}catch(e){}state.user=null;state.view='login';state.isPasswordReset=false;state.lastAuthError=null;state.authAttempts=0;localStorage.clear();sessionStorage.clear();window.history.replaceState(null,'',window.location.pathname);render();}
-async function resetPassword(email){try{if(!isValidEmail(email))throw new Error('invalid format');const{error}=await supabaseClient.auth.resetPasswordForEmail(email.toLowerCase().trim(),{redirectTo:`${window.location.origin}${window.location.pathname}`});if(error)throw error;return{success:true};}catch(error){return{success:false,error};}}
-async function loadBusinesses(){try{const{data,error}=await supabaseClient.from('businesses').select(`*, reviews(id, rating, comment, user_name, created_at)`).order('created_at',{ascending:false});if(error)throw error;state.businesses=(data||[]).map(b=>{const reviews=b.reviews||[];const avgRating=reviews.length>0?(reviews.reduce((sum,r)=>sum+r.rating,0)/reviews.length).toFixed(1):0;return{...b,rating:avgRating,total_ratings:reviews.length};});}catch(error){state.businesses=[];}}
+function showModal(t,m,type='error'){
+    const icons={
+        error:{icon:'fa-exclamation-circle',color:'text-red-500',bg:'bg-red-500/10'},
+        success:{icon:'fa-check-circle',color:'text-green-500',bg:'bg-green-500/10'},
+        info:{icon:'fa-info-circle',color:'text-blue-500',bg:'bg-blue-500/10'},
+        warning:{icon:'fa-exclamation-triangle',color:'text-yellow-500',bg:'bg-yellow-500/10'}
+    };
+    const s=icons[type]||icons.info;
+    const modal=document.createElement('div');
+    modal.className='modal-overlay fixed inset-0 z-50 flex items-center justify-center p-6';
+    modal.innerHTML=`<div class="modal-content glass max-w-md w-full overflow-hidden shadow-2xl border-2 border-${type==='error'?'red':type==='success'?'green':'blue'}-500/30"><div class="${s.bg} p-6 border-b border-gray-300/50"><div class="flex items-center gap-4"><div class="w-16 h-16 rounded-full bg-white/50 flex items-center justify-center shadow-lg"><i class="fas ${s.icon} text-4xl ${s.color}"></i></div><h3 class="text-2xl font-bold text-gray-900">${t}</h3></div></div><div class="p-6"><p class="text-gray-700 leading-relaxed text-lg">${m}</p></div><div class="p-6 pt-0 flex gap-3"><button onclick="this.closest('.modal-overlay').remove()" class="flex-1 px-6 py-4 gradient-red text-white rounded-xl font-semibold transition-all hover:shadow-lg hover:scale-105">Cerrar</button></div></div>`;
+    document.getElementById('modal-root').appendChild(modal);
+    setTimeout(()=>modal.remove(),6000);
+}
+
+function showPasswordResetModal(){
+    const modal=document.createElement('div');
+    modal.className='modal-overlay fixed inset-0 z-50 flex items-center justify-center p-6';
+    modal.innerHTML=`<div class="modal-content glass max-w-md w-full overflow-hidden shadow-2xl border-2 border-blue-500/30"><div class="bg-blue-500/10 p-6 border-b border-gray-300/50"><div class="flex items-center gap-4"><div class="w-16 h-16 rounded-full bg-white/50 flex items-center justify-center shadow-lg"><i class="fas fa-key text-4xl text-blue-500"></i></div><h3 class="text-2xl font-bold text-gray-900">Nueva Contraseña</h3></div></div><form id="password-reset-form" class="p-6 space-y-5"><p class="text-gray-600 mb-4 text-base">Establece tu nueva contraseña.</p><div><label class="block text-sm font-semibold text-gray-700 mb-2"><i class="fas fa-lock text-yellow-600 mr-2"></i>Nueva Contraseña</label><div class="relative"><input type="password" id="new-password-reset" required placeholder="Mínimo 6 caracteres" class="w-full px-5 py-4 pr-12 rounded-xl border-2 border-gray-300 bg-white text-gray-900 focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus transition-all"><button type="button" onclick="togglePasswordInModal('new-password-reset')" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-600 hover:text-yellow-600 transition-colors"><i class="fas fa-eye" id="icon-new-password-reset"></i></button></div></div><div><label class="block text-sm font-semibold text-gray-700 mb-2"><i class="fas fa-lock text-yellow-600 mr-2"></i>Confirmar Contraseña</label><div class="relative"><input type="password" id="confirm-new-password-reset" required placeholder="Repite la contraseña" class="w-full px-5 py-4 pr-12 rounded-xl border-2 border-gray-300 bg-white text-gray-900 focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus transition-all"><button type="button" onclick="togglePasswordInModal('confirm-new-password-reset')" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-600 hover:text-yellow-600 transition-colors"><i class="fas fa-eye" id="icon-confirm-new-password-reset"></i></button></div></div><div class="flex gap-3 pt-4"><button type="button" onclick="this.closest('.modal-overlay').remove(); logoutUser();" class="flex-1 px-6 py-4 gradient-red text-white rounded-xl font-semibold transition-all hover:shadow-lg hover:scale-105">Cancelar</button><button type="submit" class="flex-1 px-6 py-4 gradient-green text-white rounded-xl font-semibold transition-all hover:shadow-lg hover:scale-105">Cambiar</button></div></form></div>`;
+    document.getElementById('modal-root').appendChild(modal);
+    document.getElementById('password-reset-form').addEventListener('submit',async(e)=>{
+        e.preventDefault();
+        const n=document.getElementById('new-password-reset').value;
+        const c=document.getElementById('confirm-new-password-reset').value;
+        if(n!==c){
+            showModal('Error','Las contraseñas no coinciden','error');
+            return;
+        }
+        if(n.length<6){
+            showModal('Error','Mínimo 6 caracteres','error');
+            return;
+        }
+        try{
+            const{error}=await supabaseClient.auth.updateUser({password:n});
+            if(error)throw error;
+            modal.remove();
+            window.history.replaceState(null,'',window.location.pathname);
+            showModal('¡Éxito!','Contraseña actualizada.','success');
+            state.isPasswordReset=false;
+            setTimeout(()=>logoutUser(),2000);
+        }catch(error){
+            showModal('Error',error.message,'error');
+        }
+    });
+}
+
+function showDeleteAccountModal(){
+    const modal=document.createElement('div');
+    modal.className='modal-overlay fixed inset-0 z-50 flex items-center justify-center p-6';
+    modal.innerHTML=`<div class="modal-content glass max-w-md w-full overflow-hidden shadow-2xl border-2 border-red-500/30"><div class="bg-red-500/10 p-6 border-b border-gray-300/50"><div class="flex items-center gap-4"><div class="w-16 h-16 rounded-full bg-white/50 flex items-center justify-center shadow-lg"><i class="fas fa-exclamation-triangle text-4xl text-red-500"></i></div><h3 class="text-2xl font-bold text-gray-900">Eliminar Cuenta</h3></div></div><div class="p-6 space-y-4"><p class="text-gray-700 leading-relaxed text-lg font-semibold">⚠️ Acción permanente.</p><p class="text-gray-600">Se eliminará:</p><ul class="list-disc list-inside text-gray-600 space-y-2 ml-4"><li>Tu cuenta</li><li>Todos tus negocios</li><li>Todas tus reseñas</li></ul><div class="bg-yellow-500/10 border-2 border-yellow-500/30 rounded-xl p-4 mt-4"><p class="text-yellow-700 font-semibold text-sm"><i class="fas fa-info-circle mr-2"></i>Escribe "ELIMINAR"</p></div><input type="text" id="delete-confirmation-input" placeholder="Escribe ELIMINAR" class="w-full px-5 py-4 rounded-xl border-2 border-gray-300 bg-white text-gray-900 focus:border-red-500 focus:ring-4 focus:ring-red-500/20 outline-none input-focus transition-all"></div><div class="p-6 pt-0 flex gap-3"><button onclick="this.closest('.modal-overlay').remove()" class="flex-1 px-6 py-4 bg-gray-300 hover:bg-gray-400 text-gray-900 rounded-xl font-semibold transition-all hover:scale-105">Cancelar</button><button onclick="confirmDeleteAccount()" class="flex-1 px-6 py-4 gradient-red text-white rounded-xl font-semibold transition-all hover:scale-105 hover:shadow-lg"><i class="fas fa-trash mr-2"></i>Eliminar</button></div></div>`;
+    document.getElementById('modal-root').appendChild(modal);
+}
+
+async function confirmDeleteAccount(){
+    const i=document.getElementById('delete-confirmation-input');
+    if(!i||i.value.toUpperCase()!=='ELIMINAR'){
+        showModal('Confirmación Requerida','Escribe "ELIMINAR"','warning');
+        return;
+    }
+    try{
+        const u=state.user.id;
+        await supabaseClient.from('reviews').delete().eq('user_id',u);
+        await supabaseClient.from('businesses').delete().eq('user_id',u);
+        await supabaseClient.auth.signOut();
+        document.querySelector('.modal-overlay')?.remove();
+        showModal('Cuenta Eliminada','Cuenta eliminada.','success');
+        state.user=null;
+        state.view='login';
+        localStorage.clear();
+        sessionStorage.clear();
+        setTimeout(()=>render(),2000);
+    }catch(error){
+        showModal('Error','No se pudo eliminar.','error');
+    }
+}
+
+function togglePasswordInModal(inputId){
+    const input=document.getElementById(inputId);
+    const icon=document.getElementById(`icon-${inputId}`);
+    if(input&&icon){
+        if(input.type==='password'){
+            input.type='text';
+            icon.className='fas fa-eye-slash';
+        }else{
+            input.type='password';
+            icon.className='fas fa-eye';
+        }
+    }
+}
+
+function getAuthErrorMessage(error){
+    const msg=error.message||'';
+    if(msg.includes('User already registered')||msg.includes('already been registered'))return{title:'Usuario Existente',message:'Este correo ya está registrado.',type:'warning'};
+    if(msg.includes('Invalid login credentials'))return{title:'Credenciales Incorrectas',message:'Correo o contraseña incorrectos.',type:'error'};
+    if(msg.includes('Email not confirmed'))return{title:'Correo No Confirmado',message:'Confirma tu correo primero.',type:'info'};
+    if(msg.includes('invalid format'))return{title:'Formato Inválido',message:'Formato del correo inválido.',type:'error'};
+    if(msg.includes('Password should be at least 6'))return{title:'Contraseña Débil',message:'Mínimo 6 caracteres.',type:'error'};
+    if(msg.includes('rate limit'))return{title:'Demasiados Intentos',message:'Espera unos minutos.',type:'warning'};
+    return{title:'Error',message:msg||'Error inesperado.',type:'error'};
+}
+
+function isValidEmail(email){
+    return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+async function loginUser(email,password){
+    try{
+        state.lastAuthError=null;
+        const{data,error}=await supabaseClient.auth.signInWithPassword({email:email.toLowerCase().trim(),password});
+        if(error){
+            state.lastAuthError=error;
+            state.authAttempts++;
+            throw error;
+        }
+        state.user=data.user;
+        state.authAttempts=0;
+        return{success:true};
+    }catch(error){
+        return{success:false,error};
+    }
+}
+
+async function registerUser(email,password,confirmPassword){
+    try{
+        state.lastAuthError=null;
+        if(!isValidEmail(email))throw new Error('invalid format');
+        if(password.length<6)throw new Error('Password should be at least 6 characters');
+        if(password!==confirmPassword)throw new Error('Las contraseñas no coinciden');
+        const{data,error}=await supabaseClient.auth.signUp({email:email.toLowerCase().trim(),password,options:{emailRedirectTo:`${window.location.origin}${window.location.pathname}`}});
+        if(error){
+            state.lastAuthError=error;
+            throw error;
+        }
+        if(data.user&&data.user.identities&&data.user.identities.length===0)throw new Error('User already registered');
+        return{success:true,requiresConfirmation:!data.session};
+    }catch(error){
+        return{success:false,error};
+    }
+}
+
+async function logoutUser(){
+    try{
+        await supabaseClient.auth.signOut();
+    }catch(e){}
+    state.user=null;
+    state.view='login';
+    state.isPasswordReset=false;
+    state.lastAuthError=null;
+    state.authAttempts=0;
+    localStorage.clear();
+    sessionStorage.clear();
+    window.history.replaceState(null,'',window.location.pathname);
+    render();
+}
+
+async function resetPassword(email){
+    try{
+        if(!isValidEmail(email))throw new Error('invalid format');
+        const{error}=await supabaseClient.auth.resetPasswordForEmail(email.toLowerCase().trim(),{redirectTo:`${window.location.origin}${window.location.pathname}`});
+        if(error)throw error;
+        return{success:true};
+    }catch(error){
+        return{success:false,error};
+    }
+}
+
+async function loadBusinesses(){
+    try{
+        const{data,error}=await supabaseClient.from('businesses').select(`*, reviews(id, rating, comment, user_name, created_at)`).order('created_at',{ascending:false});
+        if(error)throw error;
+        state.businesses=(data||[]).map(b=>{
+            const reviews=b.reviews||[];
+            const avgRating=reviews.length>0?(reviews.reduce((sum,r)=>sum+r.rating,0)/reviews.length).toFixed(1):0;
+            return{...b,rating:avgRating,total_ratings:reviews.length};
+        });
+        cleanupMemory(); // Limpiar memoria después de cargar
+    }catch(error){
+        state.businesses=[];
+    }
+}
+
 async function saveBusiness(formData){
     console.log('💾 Guardando negocio...');
     console.log('📊 Datos del formulario:', formData);
     
+    // Validación robusta
     if(!formData.name||formData.name.trim()===''){
         console.log('❌ Error: Nombre vacío');
         showModal('Obligatorio','NOMBRE es obligatorio.','warning');
@@ -542,14 +822,16 @@ async function saveBusiness(formData){
         return false;
     }
     
+    // Validar teléfono con regex más estricto
     const phoneDigits=formData.phone.replace(/\D/g,'');
     console.log('📞 Teléfono procesado:', phoneDigits, 'Longitud:', phoneDigits.length);
     
-    if(phoneDigits.length!==10){
+    if(!/^\d{10}$/.test(phoneDigits)){
         console.log('❌ Error: Teléfono inválido');
-        showModal('Teléfono Inválido','Debe tener 10 dígitos.','error');
+        showModal('Teléfono Inválido','Debe tener exactamente 10 dígitos sin espacios ni caracteres especiales.','error');
         return false;
     }
+    
     if(!formData.agreed){
         console.log('❌ Error: Checkbox no marcado');
         showModal('Confirmación','Confirma los datos.','warning');
@@ -604,46 +886,383 @@ async function saveBusiness(formData){
         state.currentBusiness=null;
         resetForm();
         render();
+        cleanupMemory(); // Limpiar memoria después de guardar
         return true;
         
     }catch(error){
         console.error('❌ Error al guardar:', error);
-        showModal('Error','Error: '+(error.message||'Desconocido'),'error');
+        showModal('Error','Error al guardar: '+(error.message||'Desconocido'),'error');
         return false;
     }
 }
-async function deleteBusiness(id){if(!confirm('¿Eliminar?'))return;try{const{error}=await supabaseClient.from('businesses').delete().eq('id',id);if(error)throw error;await loadBusinesses();state.view='list';showModal('Eliminado','Negocio eliminado.','success');render();}catch(error){showModal('Error',error.message,'error');}}
-async function saveReview(businessId,rating,comment){if(!state.user){showModal('Sesión Requerida','Inicia sesión.','warning');return false;}if(!rating||rating===0){showModal('Calificación Requerida','Selecciona 1-5 estrellas.','warning');return false;}try{const reviewData={business_id:businessId,user_id:state.user.id,user_name:state.user.email.split('@')[0],rating:parseInt(rating),comment:comment.trim()};const{data,error}=await supabaseClient.from('reviews').insert([reviewData]).select();if(error)throw error;await loadBusinesses();state.selectedRating=0;showModal('¡Gracias!','Reseña publicada.','success');setTimeout(()=>{const business=state.businesses.find(b=>b.id===businessId);if(business){state.currentBusiness=business;render();}},500);return true;}catch(error){showModal('Error','No se pudo guardar: '+(error.message||'Error desconocido'),'error');return false;}}
-function resetForm(){state.formData={name:'',representative:'',category:'',street:'',colony:'',phone:'',hours:'No definido',days:'No definido',description:'',services:'',logo:null,logo_url:'',agreed:false};state.enableHours=false;state.showCustomDays=false;}
-function togglePassword(id){state.showPassword[id]=!state.showPassword[id];const input=document.getElementById(id);if(input)input.type=state.showPassword[id]?'text':'password';const button=input?.nextElementSibling?.querySelector('i');if(button)button.className=`fas fa-eye${state.showPassword[id]?'-slash':''}`;}
-function toggleHoursInput(){state.enableHours=!state.enableHours;const h=document.getElementById('hours');if(h){h.disabled=!state.enableHours;if(state.enableHours){h.value='';h.placeholder='Ej: 7:00 AM - 9:00 PM';state.formData.hours='';}else{h.value='No definido';h.placeholder='No definido';state.formData.hours='No definido';}}}
-function handleDaysChange(value){state.formData.days=value;state.showCustomDays=value==='Otro';render();}
-function forceUppercase(event){const input=event.target;const start=input.selectionStart;const end=input.selectionEnd;input.value=input.value.toUpperCase();input.setSelectionRange(start,end);}
-function openWhatsApp(phone,businessName){const phoneClean=phone.replace(/\D/g,'');const whatsappNumber='52'+phoneClean;const message=`Hola, vi tu negocio "${businessName}" en UbicaNegoLeon y me gustaría más información.`;window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,'_blank');}
-function makeCall(phone){window.location.href=`tel:${phone.replace(/\D/g,'')}`;}
-function selectRating(rating){state.selectedRating=rating;const stars=document.querySelectorAll('.star-rating-btn span');stars.forEach((star,index)=>{if(index<rating){star.className='text-yellow-500';}else{star.className='text-gray-400';}});}
-function cleanForm(){state.formData={name:'',representative:'',category:'',street:'',colony:'',phone:'',hours:'',days:'',description:'',services:'',logo:null,logo_url:'',agreed:false};state.enableHours=false;state.showCustomDays=false;render();showModal('Formulario Limpiado','Campos vacíos.','info');}
-setInterval(()=>{state.viewCount+=Math.floor(Math.random()*5)+1;const el=document.getElementById('view-counter');if(el)el.textContent=state.viewCount.toLocaleString();},600000);
+
+async function deleteBusiness(id){
+    if(!confirm('¿Eliminar?'))return;
+    try{
+        const{error}=await supabaseClient.from('businesses').delete().eq('id',id);
+        if(error)throw error;
+        await loadBusinesses();
+        state.view='list';
+        showModal('Eliminado','Negocio eliminado.','success');
+        render();
+    }catch(error){
+        showModal('Error',error.message,'error');
+    }
+}
+
+async function saveReview(businessId,rating,comment){
+    if(!state.user){
+        showModal('Sesión Requerida','Inicia sesión.','warning');
+        return false;
+    }
+    if(!rating||rating===0){
+        showModal('Calificación Requerida','Selecciona 1-5 estrellas.','warning');
+        return false;
+    }
+    try{
+        const reviewData={
+            business_id:businessId,
+            user_id:state.user.id,
+            user_name:state.user.email.split('@')[0],
+            rating:parseInt(rating),
+            comment:comment.trim()
+        };
+        const{data,error}=await supabaseClient.from('reviews').insert([reviewData]).select();
+        if(error)throw error;
+        await loadBusinesses();
+        state.selectedRating=0;
+        showModal('¡Gracias!','Reseña publicada.','success');
+        setTimeout(()=>{
+            const business=state.businesses.find(b=>b.id===businessId);
+            if(business){
+                state.currentBusiness=business;
+                render();
+            }
+        },500);
+        return true;
+    }catch(error){
+        showModal('Error','No se pudo guardar: '+(error.message||'Error desconocido'),'error');
+        return false;
+    }
+}
+
+function resetForm(){
+    state.formData={
+        name:'',
+        representative:'',
+        category:'',
+        street:'',
+        colony:'',
+        phone:'',
+        hours:'No definido',
+        days:'No definido',
+        description:'',
+        services:'',
+        logo:null,
+        logo_url:'',
+        agreed:false
+    };
+    cleanupMemory(); // Limpiar memoria al resetear
+}
+
+function togglePassword(id){
+    state.showPassword[id]=!state.showPassword[id];
+    const input=document.getElementById(id);
+    if(input)input.type=state.showPassword[id]?'text':'password';
+    const button=input?.nextElementSibling?.querySelector('i');
+    if(button)button.className=`fas fa-eye${state.showPassword[id]?'-slash':''}`;
+}
+
+function forceUppercase(event){
+    const input=event.target;
+    const start=input.selectionStart;
+    const end=input.selectionEnd;
+    input.value=input.value.toUpperCase();
+    input.setSelectionRange(start,end);
+}
+
+function openWhatsApp(phone,businessName){
+    const phoneClean=phone.replace(/\D/g,'');
+    const whatsappNumber='52'+phoneClean;
+    const message=`Hola, vi tu negocio "${businessName}" en UbicaNegoLeon y me gustaría más información.`;
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,'_blank');
+}
+
+function makeCall(phone){
+    window.location.href=`tel:${phone.replace(/\D/g,'')}`;
+}
+
+function selectRating(rating){
+    state.selectedRating=rating;
+    const stars=document.querySelectorAll('.star-rating-btn span');
+    stars.forEach((star,index)=>{
+        if(index<rating){
+            star.className='text-yellow-500';
+        }else{
+            star.className='text-gray-400';
+        }
+    });
+}
+
+function cleanForm(){
+    state.formData={
+        name:'',
+        representative:'',
+        category:'',
+        street:'',
+        colony:'',
+        phone:'',
+        hours:'',
+        days:'',
+        description:'',
+        services:'',
+        logo:null,
+        logo_url:'',
+        agreed:false
+    };
+    render();
+    showModal('Formulario Limpiado','Campos vacíos.','info');
+}
+
+setInterval(()=>{
+    state.viewCount+=Math.floor(Math.random()*5)+1;
+    const el=document.getElementById('view-counter');
+    if(el)el.textContent=state.viewCount.toLocaleString();
+},600000);
+
 const Header=()=>`<header class="header-gold sticky top-0 z-40 shadow-xl"><div class="max-w-7xl mx-auto px-4 sm:px-6 py-4"><div class="flex items-center justify-between"><div class="flex items-center gap-3"><div><h1 class="text-xl sm:text-2xl font-bold header-text-white">Ubicanegoleon</h1><p class="text-xs header-text-white">León, Guanajuato</p></div></div><nav class="flex items-center gap-2 sm:gap-3">${state.view!=='login'&&state.view!=='register'?`<button onclick="changeView('list')" class="p-2 sm:p-3 rounded-xl transition-all ${state.view==='list'?'bg-white/40 header-icon-gold':'header-icon-black hover:bg-white/20'}"><i class="fas fa-home text-base sm:text-lg"></i></button>`:''}${state.user?`<button onclick="createBusiness()" class="gradient-green text-white px-3 sm:px-5 py-2 sm:py-3 rounded-xl font-semibold shadow-lg hidden md:flex items-center gap-2 hover:scale-105 transition-all"><i class="fas fa-plus"></i><span>Registrar</span></button><button onclick="createBusiness()" class="gradient-green text-white p-2 sm:p-3 rounded-xl shadow-lg md:hidden hover:scale-105 transition-all"><i class="fas fa-plus"></i></button><div class="relative group"><button class="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl hover:bg-white/20 transition-all"><div class="w-7 h-7 sm:w-8 sm:h-8 user-initial-circle rounded-full flex items-center justify-center font-bold text-xs sm:text-sm shadow-lg">${state.user.email.charAt(0).toUpperCase()}</div><i class="fas fa-chevron-down text-xs text-gray-700 hidden sm:block"></i></button><div class="absolute right-0 mt-2 w-56 glass shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all"><div class="p-4 border-b border-gray-300"><p class="text-sm font-semibold text-gray-900 truncate">${state.user.email}</p><p class="text-xs text-gray-600 mt-1">Usuario registrado</p></div><button onclick="showDeleteAccountModal()" class="w-full px-4 py-3 text-left delete-account-gold hover:bg-orange-500/10 transition-all flex items-center gap-3 border-b border-gray-300"><i class="fas fa-user-times"></i><span class="font-medium">Eliminar cuenta</span></button><button onclick="logoutUser()" class="w-full px-4 py-3 text-left text-red-600 hover:bg-red-500/10 rounded-b-2xl transition-all flex items-center gap-3"><i class="fas fa-sign-out-alt"></i><span class="font-medium">Cerrar sesión</span></button></div></div>`:`${state.view!=='login'&&state.view!=='register'?`<button onclick="changeView('login')" class="px-3 sm:px-5 py-2 sm:py-2.5 text-gray-900 hover:bg-white/20 rounded-xl font-semibold transition-all text-sm sm:text-base">Iniciar Sesión</button>`:''}`}</nav></div></div></header>`;
+
 const Footer=()=>`<div class="fixed bottom-0 left-0 right-0 glass border-t border-yellow-500/20 py-3 sm:py-4 z-50 shadow-xl"><div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="flex items-center justify-center gap-2 sm:gap-3"><div class="w-8 h-8 sm:w-10 sm:h-10 gradient-gold rounded-full flex items-center justify-center pulse-slow shadow-lg shine"><i class="fas fa-users text-black text-sm sm:text-base"></i></div><p class="text-gray-700 font-medium text-xs sm:text-base">Tu negocio puede alcanzar <span class="text-yellow-600 font-bold text-sm sm:text-lg" id="view-counter">${state.viewCount.toLocaleString()}</span> <span class="text-gray-500">usuarios</span></p></div></div></div>`;
+
 const PasswordInput=(id,label,placeholder,required=false)=>`<div><label class="block text-sm font-semibold text-gray-700 mb-2 form-label-icon"><i class="fas fa-lock text-yellow-600"></i><span>${label}</span></label><div class="relative"><input type="${state.showPassword[id]?'text':'password'}" id="${id}" ${required?'required':''} placeholder="${placeholder}" class="w-full px-5 py-4 pr-12 rounded-xl border-2 border-gray-300 bg-white text-gray-900 focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus transition-all"><button type="button" onclick="togglePassword('${id}')" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-600 hover:text-yellow-600 transition-colors"><i class="fas fa-eye${state.showPassword[id]?'-slash':''}"></i></button></div></div>`;
+
 const LoginView=()=>{const isLogin=state.view==='login';return `<div class="min-h-screen flex items-center justify-center p-6"><div class="max-w-md w-full"><div class="glass p-10 shadow-2xl fade-in border-2 border-yellow-500/20"><div class="text-center mb-8">${isLogin?`<div class="w-34 h-34 sm:w-40 sm:h-40 rounded-3xl overflow-hidden mx-auto mb-4 shadow-2xl border-4 border-yellow-500 gradient-black-white-bg flex items-center justify-center shine"><img src="Logoubicanegoleongto.png" alt="Ubicanegoleon" class="w-full h-full object-contain p-0"></div>`:''}<h2 class="text-2xl sm:text-3xl font-extrabold gradient-gold-text-animated mb-4">${isLogin?'Ubicanegoleon':'Crear Cuenta'}</h2><p class="text-gray-500 text-sm">${isLogin?'Ingresa a tu cuenta':'Únete al directorio'}</p></div><form onsubmit="handleAuth(event)" class="space-y-5"><div><label class="block text-sm font-semibold text-gray-700 mb-2 form-label-icon"><i class="fas fa-envelope text-yellow-600"></i><span>Correo electrónico</span></label><input type="email" id="email" required placeholder="tu@correo.com" class="w-full px-5 py-4 rounded-xl border-2 border-gray-300 bg-white text-gray-900 focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus transition-all"></div>${PasswordInput('password','Contraseña','••••••••',true)}${!isLogin?PasswordInput('confirmPassword','Confirmar Contraseña','••••••••',true):''}${isLogin?`<div class="flex items-center justify-between"><label class="flex items-center gap-2 cursor-pointer group"><input type="checkbox" id="keepLoggedIn" ${state.keepLoggedIn?'checked':''} onchange="state.keepLoggedIn = this.checked" class="w-5 h-5 rounded border-gray-400 bg-white text-yellow-600 focus:ring-yellow-500"><span class="text-sm text-gray-600 group-hover:text-gray-900 transition-colors">Mantener sesión</span></label><button type="button" onclick="handleForgotPassword()" class="text-sm forgot-password-link">¿Olvidaste tu contraseña?</button></div>`:''}<button type="submit" class="w-full btn-gold text-black py-4 rounded-xl font-bold shadow-xl"><i class="fas fa-${isLogin?'sign-in-alt':'user-plus'} mr-2"></i>${isLogin?'Iniciar Sesión':'Registrarme'}</button>${isLogin?`<button type="button" onclick="changeView('list')" class="w-full py-4 gradient-green-intense text-white rounded-xl font-bold transition-all hover:scale-105 hover:shadow-xl"><i class="fas fa-eye mr-2"></i>Ver Directorio</button>`:''}<div class="text-center pt-4 border-t border-gray-300"><button type="button" onclick="changeView('${isLogin?'register':'login'}')" class="text-gray-600 hover:text-gray-900 transition-colors">${isLogin?'¿No tienes cuenta?':'¿Ya tienes cuenta?'} <span class="font-bold register-link ml-1">${isLogin?'Registrarse':'Inicia sesión'}</span></button></div></form></div><div class="mt-6 text-center text-sm text-gray-600"><p>Directorio oficial de negocios en León, Gto.</p><p class="text-xs text-gray-500 mt-1">By <span class="font-semibold text-yellow-600">axeltech</span></p></div></div></div>`;};
-const FormView=()=>{return `<div class="pb-24 sm:pb-28 min-h-screen">${Header()}<div class="max-w-4xl mx-auto mt-6 sm:mt-10 px-4 sm:px-6"><div class="glass p-6 sm:p-10 shadow-2xl fade-in border-2 border-yellow-500/20"><div class="mb-8"><h2 class="text-2xl sm:text-3xl font-bold text-gray-900"><i class="fas fa-${state.currentBusiness?'edit':'plus-circle'} text-yellow-600 mr-3"></i>${state.currentBusiness?'Modificar':'Registrar'} Negocio</h2><p class="text-gray-600 mb-6">* = Campos obligatorios</p></div><form onsubmit="handleBusinessSubmit(event)" class="space-y-6"><div class="glass-light p-6 border-2 border-dashed border-yellow-500/30"><label class="block text-sm font-bold text-gray-700 mb-3 form-label-icon"><i class="fas fa-image text-yellow-600"></i><span>Logotipo (Opcional)</span></label><div class="flex flex-col sm:flex-row items-center gap-6"><div class="w-full sm:w-40 h-40 image-upload-container border-2 border-dashed border-gray-400 overflow-hidden bg-gray-100 flex items-center justify-center cursor-pointer hover:border-yellow-500/50 transition-all" onclick="document.getElementById('logo-input').click()">${state.formData.logo_url?`<img src="${state.formData.logo_url}" class="image-preview-logo" alt="Preview">`:`<div class="text-center"><i class="fas fa-cloud-upload-alt text-5xl text-gray-400 mb-2"></i><p class="text-xs text-gray-500">Click para subir</p></div>`}</div><input type="file" id="logo-input" accept="image/*" onchange="handleLogo(event)" class="hidden"><div class="flex-1 text-center sm:text-left"><p class="text-sm text-gray-600 mb-2">JPG, PNG (Máx. 10MB)</p></div></div></div><div class="space-y-6"><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-store text-yellow-600"></i><span>Nombre * (MAYÚSCULAS)</span></label><input type="text" id="name" required value="${state.formData.name}" placeholder="Ej: CAFÉ LA ESQUINA" oninput="forceUppercase(event); state.formData.name = this.value;" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus uppercase-force"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-user-tie text-yellow-600"></i><span>Representante</span></label><input type="text" id="representative" value="${state.formData.representative}" placeholder="Nombre del dueño" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-tag text-yellow-600"></i><span>Giro</span></label><input type="text" id="category" value="${state.formData.category}" placeholder="Ej: Restaurante" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-road text-yellow-600"></i><span>Calle y Número *</span></label><input type="text" id="street" required value="${state.formData.street}" placeholder="Ej: Blvd López Mateos 1234" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-map-pin text-yellow-600"></i><span>Colonia *</span></label><input type="text" id="colony" required value="${state.formData.colony}" placeholder="Ej: Centro" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-phone text-yellow-600"></i><span>Teléfono * (10 dígitos)</span></label><input type="tel" id="phone" required value="${state.formData.phone}" placeholder="4771234567" inputmode="numeric" pattern="[0-9]*" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-calendar-alt text-yellow-600"></i><span>Días</span></label><textarea id="days" rows="3" placeholder="Ej: Lunes a Viernes, 9:00 AM - 6:00 PM" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none">${state.formData.days}</textarea></div><div><label class="flex items-center gap-3 mb-3 cursor-pointer"><span class="text-sm font-bold text-gray-700 form-label-icon"><i class="fas fa-clock text-yellow-600"></i><span>Especificar Horario</span></span></label><textarea id="hours" rows="3" placeholder="Ej: Lunes a Viernes: 9:00 AM - 6:00 PM, Sábado: 10:00 AM - 2:00 PM" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none">${state.formData.hours}</textarea></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-align-left text-yellow-600"></i><span>Descripción</span></label><textarea id="description" rows="4" placeholder="Cuéntanos..." class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none">${state.formData.description}</textarea></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-list-ul text-yellow-600"></i><span>Servicios</span></label><textarea id="services" rows="3" placeholder="Ej: Wifi, Estacionamiento..." class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none">${state.formData.services}</textarea></div></div><label class="flex items-start gap-4 p-5 bg-yellow-500/10 rounded-2xl cursor-pointer border-2 border-yellow-500/30 hover:border-yellow-500/50 transition-all group"><input type="checkbox" id="agreed" ${state.formData.agreed?'checked':''} class="w-6 h-6 mt-1 rounded-lg border-2 border-yellow-600 bg-white text-yellow-600 focus:ring-yellow-500"><div class="flex-1"><p class="font-semibold text-yellow-700 group-hover:text-yellow-800"><i class="fas fa-shield-check mr-2"></i>Confirmo que los datos son correctos</p></div></label><div class="flex flex-col sm:flex-row gap-3 pt-4"><button type="button" onclick="changeView('list')" class="flex-1 px-4 py-3 bg-gray-300 hover:bg-gray-400 text-gray-900 rounded-xl font-bold transition-all hover:scale-105"><i class="fas fa-times mr-1"></i>Cancel</button><button type="button" onclick="cleanForm()" class="flex-1 px-4 py-3 bg-yellow-400/30 hover:bg-yellow-400/50 text-gray-900 rounded-xl font-bold transition-all hover:scale-105"><i class="fas fa-eraser mr-1"></i>Clean</button><button type="button" onclick="toggleAIChat()" class="flex-1 px-4 py-3 bg-gradient-to-r from-black via-gray-800 to-black text-yellow-400 font-bold rounded-xl shadow-2xl hover:scale-105 transition-all flex items-center justify-center gap-2 border-2 border-yellow-400/30"><i class="fas fa-robot"></i><span>Autofill IA</span></button><button type="submit" class="flex-1 gradient-green text-white px-4 py-3 rounded-xl font-bold shadow-lg hover:scale-105 hover:shadow-xl transition-all"><i class="fas fa-save mr-1"></i>Save</button></div></form></div></div>${state.aiChatOpen?`<div class="ai-chat-modal glass" onmousedown="startDrag(event)"><div class="ai-chat-header"><h3><i class="fas fa-robot mr-2"></i>Autofill IA</h3><div class="flex items-center gap-2"><button class="close-btn" onclick="toggleChatMinimize()" title="Minimizar"><i class="fas fa-minus"></i></button><button class="close-btn" onclick="state.aiChatOpen = false; render()" title="Cerrar"><i class="fas fa-times"></i></button></div></div><div class="ai-chat-messages">${state.aiMessages.map(msg=>`<div class="ai-message ${msg.role}">${msg.content}</div>`).join('')}${state.aiLoading?`<div class="ai-message bot"><span class="ai-loading"></span> Procesando...</div>`:''}</div><div class="ai-chat-input"><div class="file-upload"><label><i class="fas fa-paperclip mr-1"></i>Imagen<input type="file" accept="image/*" onchange="handleAIImageUpload(event)" /></label>${state.aiImagePreview?`<div class="file-preview"><img src="${state.aiImagePreview}" alt="Preview" /><button class="remove-file" onclick="removeAIImage()">×</button></div>`:''}</div><textarea id="ai-chat-input" placeholder="Describe tu negocio o sube una imagen con los datos..." rows="3" onkeypress="if(event.key==='Enter' && !event.shiftKey){event.preventDefault(); sendAIMessage();}"></textarea><div class="ai-chat-actions"><button class="btn-send" onclick="sendAIMessage()"><i class="fas fa-paper-plane"></i> Enviar</button><button class="btn-start" onclick="autofillForm()"><i class="fas fa-play"></i> START</button></div></div></div>`:''}${Footer()}</div>`;};
+
+const FormView=()=>{return `<div class="pb-24 sm:pb-28 min-h-screen">${Header()}<div class="max-w-4xl mx-auto mt-6 sm:mt-10 px-4 sm:px-6"><div class="glass p-6 sm:p-10 shadow-2xl fade-in border-2 border-yellow-500/20"><div class="mb-8"><h2 class="text-2xl sm:text-3xl font-bold text-gray-900"><i class="fas fa-${state.currentBusiness?'edit':'plus-circle'} text-yellow-600 mr-3"></i>${state.currentBusiness?'Modificar':'Registrar'} Negocio</h2><p class="text-gray-600 mb-6">* = Campos obligatorios</p></div><form onsubmit="handleBusinessSubmit(event)" class="space-y-6"><div class="glass-light p-6 border-2 border-dashed border-yellow-500/30"><label class="block text-sm font-bold text-gray-700 mb-3 form-label-icon"><i class="fas fa-image text-yellow-600"></i><span>Logotipo (Opcional)</span></label><div class="flex flex-col sm:flex-row items-center gap-6"><div class="w-full sm:w-40 h-40 image-upload-container border-2 border-dashed border-gray-400 overflow-hidden bg-gray-100 flex items-center justify-center cursor-pointer hover:border-yellow-500/50 transition-all" onclick="document.getElementById('logo-input').click()">${state.formData.logo_url?`<img src="${state.formData.logo_url}" class="image-preview-logo" alt="Preview">`:`<div class="text-center"><i class="fas fa-cloud-upload-alt text-5xl text-gray-400 mb-2"></i><p class="text-xs text-gray-500">Click para subir</p></div>`}</div><input type="file" id="logo-input" accept="image/*" onchange="handleLogo(event)" class="hidden"><div class="flex-1 text-center sm:text-left"><p class="text-sm text-gray-600 mb-2">JPG, PNG (Máx. 10MB)</p></div></div></div><div class="space-y-6"><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-store text-yellow-600"></i><span>Nombre * (MAYÚSCULAS)</span></label><input type="text" id="name" required value="${state.formData.name}" placeholder="Ej: CAFÉ LA ESQUINA" oninput="forceUppercase(event); state.formData.name = this.value;" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus uppercase-force"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-user-tie text-yellow-600"></i><span>Representante</span></label><input type="text" id="representative" value="${state.formData.representative}" placeholder="Nombre del dueño" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-tag text-yellow-600"></i><span>Giro</span></label><input type="text" id="category" value="${state.formData.category}" placeholder="Ej: Restaurante" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-road text-yellow-600"></i><span>Calle y Número *</span></label><input type="text" id="street" required value="${state.formData.street}" placeholder="Ej: Blvd López Mateos 1234" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-map-pin text-yellow-600"></i><span>Colonia *</span></label><input type="text" id="colony" required value="${state.formData.colony}" placeholder="Ej: Centro" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-phone text-yellow-600"></i><span>Teléfono * (10 dígitos)</span></label><input type="tel" id="phone" required value="${state.formData.phone}" placeholder="4771234567" inputmode="numeric" pattern="[0-9]*" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-calendar-alt icon-calendar-yellow"></i><span>Días</span></label><textarea id="days" rows="3" placeholder="Ej: Lunes a Viernes, 9:00 AM - 6:00 PM" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none">${state.formData.days}</textarea></div><div><label class="flex items-center gap-3 mb-3 cursor-pointer"><span class="text-sm font-bold text-gray-700 form-label-icon"><i class="fas fa-clock icon-clock-blue"></i><span>Especificar Horario</span></span></label><textarea id="hours" rows="3" placeholder="Ej: Lunes a Viernes: 9:00 AM - 6:00 PM, Sábado: 10:00 AM - 2:00 PM" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none">${state.formData.hours}</textarea></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-align-left text-yellow-600"></i><span>Descripción</span></label><textarea id="description" rows="4" placeholder="Cuéntanos..." class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none">${state.formData.description}</textarea></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-list-ul text-yellow-600"></i><span>Servicios</span></label><textarea id="services" rows="3" placeholder="Ej: Wifi, Estacionamiento..." class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none">${state.formData.services}</textarea></div></div><label class="flex items-start gap-4 p-5 bg-yellow-500/10 rounded-2xl cursor-pointer border-2 border-yellow-500/30 hover:border-yellow-500/50 transition-all group"><input type="checkbox" id="agreed" ${state.formData.agreed?'checked':''} class="w-6 h-6 mt-1 rounded-lg border-2 border-yellow-600 bg-white text-yellow-600 focus:ring-yellow-500"><div class="flex-1"><p class="font-semibold text-yellow-700 group-hover:text-yellow-800"><i class="fas fa-shield-check mr-2"></i>Confirmo que los datos son correctos</p></div></label><div class="flex flex-col sm:flex-row gap-2 pt-4"><button type="button" onclick="changeView('list')" class="btn-compact btn-cancel"><i class="fas fa-times"></i>Cancel</button><button type="button" onclick="cleanForm()" class="btn-compact btn-clean"><i class="fas fa-eraser"></i>Clean</button><button type="button" onclick="toggleAIChat()" class="btn-compact btn-autofill"><i class="fas fa-robot"></i>Autofill IA</button><button type="submit" class="btn-compact btn-save"><i class="fas fa-save"></i>Save</button></div></form></div></div>${state.aiChatOpen?`<div class="ai-chat-modal glass" onmousedown="startDrag(event)"><div class="ai-chat-header"><h3><i class="fas fa-robot mr-2"></i>Autofill IA</h3><div class="flex items-center gap-2"><button class="close-btn" onclick="toggleChatMinimize()" title="Minimizar"><i class="fas fa-minus"></i></button><button class="close-btn" onclick="state.aiChatOpen = false; render()" title="Cerrar"><i class="fas fa-times"></i></button></div></div><div class="ai-chat-messages">${state.aiMessages.map(msg=>`<div class="ai-message ${msg.role}">${msg.content}</div>`).join('')}${state.aiLoading?`<div class="ai-message bot"><span class="ai-loading"></span> Procesando...</div>`:''}</div><div class="ai-chat-input"><div class="file-upload"><label><i class="fas fa-paperclip mr-1"></i>Imagen<input type="file" accept="image/*" onchange="handleAIImageUpload(event)" /></label>${state.aiImagePreview?`<div class="file-preview"><img src="${state.aiImagePreview}" alt="Preview" /><button class="remove-file" onclick="removeAIImage()">×</button></div>`:''}</div><textarea id="ai-chat-input" placeholder="Describe tu negocio o sube una imagen con los datos..." rows="3" onkeypress="if(event.key==='Enter' && !event.shiftKey){event.preventDefault(); sendAIMessage();}"></textarea><div class="ai-chat-actions"><button class="btn-send" onclick="sendAIMessage()"><i class="fas fa-paper-plane"></i> Enviar</button><button class="btn-start" onclick="autofillForm()"><i class="fas fa-play"></i> START</button></div></div></div>`:''}${Footer()}</div>`;};
+
 const ListView=()=>{const filtered=state.businesses.filter(b=>b.name.toLowerCase().includes(state.searchTerm.toLowerCase())||(b.category&&b.category.toLowerCase().includes(state.searchTerm.toLowerCase())));return `<div class="pb-20 sm:pb-28 min-h-screen">${Header()}<div class="glass border-b border-yellow-500/20 py-6 sm:py-8 px-4 sm:px-6 mb-6 sm:mb-10 shadow-xl"><div class="max-w-7xl mx-auto"><div class="text-center mb-6"><h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Descubre Negocios en León</h2><p class="text-gray-600">Encuentra los mejores establecimientos</p></div><div class="relative max-w-2xl mx-auto fade-in flex gap-3"><div class="relative flex-1"><i class="fas fa-search absolute left-4 sm:left-6 top-1/2 transform -translate-y-1/2 text-gray-500 text-lg sm:text-xl"></i><input type="text" id="search" value="${state.tempSearchTerm}" oninput="handleSearchInput(event)" placeholder="Busca por nombre o giro..." class="w-full pl-12 sm:pl-16 pr-4 sm:pr-6 py-4 sm:py-5 rounded-2xl bg-white border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus text-base sm:text-lg shadow-lg"></div><button onclick="performSearch()" class="gradient-navy-blue text-white px-6 sm:px-8 py-4 sm:py-5 rounded-2xl font-bold shadow-lg hover:scale-105 transition-all whitespace-nowrap"><i class="fas fa-search mr-2"></i><span class="hidden sm:inline">Buscar</span></button></div></div></div><main class="max-w-7xl mx-auto px-4 sm:px-6">${filtered.length===0?`<div class="text-center py-20 fade-in"><div class="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fas fa-search text-6xl text-gray-400"></i></div><h3 class="text-2xl font-bold text-gray-900 mb-2">No se encontraron negocios</h3><p class="text-gray-600 mb-6">Intenta con otros términos</p>${state.user?`<button onclick="createBusiness()" class="btn-gold text-black px-8 py-4 rounded-xl font-bold shadow-xl hover:scale-105 transition-all"><i class="fas fa-plus mr-2"></i>Registra el primer negocio</button>`:''}</div>`:`<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">${filtered.map((b,i)=>`<div class="glass overflow-hidden shadow-xl card-hover fade-in border border-yellow-500/10" style="animation-delay: ${i*0.1}s"><div class="h-48 sm:h-56 overflow-hidden relative bg-gradient-to-br from-gray-200 to-gray-300"><img src="${b.logo_url||'https://via.placeholder.com/400x300/f8f9fa/d4af37?text=Sin+Logo'}" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x300/f8f9fa/d4af37?text=Negocio'"><div class="absolute top-4 right-4"><span class="px-3 sm:px-4 py-1.5 sm:py-2 category-badge-white-gold text-xs shadow-lg rounded-full">${b.category||'Negocio'}</span></div>${b.rating>0?`<div class="absolute bottom-4 left-4"><div class="rating-badge flex items-center gap-2 px-3 py-2 shadow-lg"><i class="fas fa-star text-yellow-400"></i><span class="font-bold text-white">${b.rating}</span><span class="text-xs text-white/80">(${b.total_ratings})</span></div></div>`:''}</div><div class="p-5 sm:p-6 business-card-footer"><h3 class="business-card-name text-lg sm:text-xl mb-3 line-clamp-1">${b.name}</h3><div class="space-y-2 mb-5">${b.address?`<p class="text-sm text-black flex items-start gap-2 card-text-bold"><i class="fas fa-map-marker-alt icon-location mt-1 flex-shrink-0"></i><span class="line-clamp-2">${b.address}</span></p>`:''}${b.phone?`<p class="text-sm text-black flex items-center gap-2 card-text-bold"><i class="fas fa-phone icon-phone"></i><span>${b.phone}</span></p>`:''}</div><div class="flex gap-3"><button onclick="viewBusiness('${b.id}')" class="flex-1 py-3 gradient-blue-strong text-white font-bold rounded-xl hover:shadow-xl transition-all hover:scale-105">Ver Detalles</button>${state.user&&b.user_id===state.user.id?`<button onclick="editBusiness('${b.id}')" class="p-3 gradient-green-translucent text-white rounded-xl transition-all hover:scale-105"><i class="fas fa-edit"></i></button>`:''}</div></div></div>`).join('')}</div>`}</main>${Footer()}</div>`;};
-const ProfileView=()=>{const b=state.currentBusiness;if(!b)return '';const displayDays=b.days==='Otro'&&b.custom_days?b.custom_days:b.days;const daysClass=(b.days==='No definido'||!b.days)?'text-red-strong':'text-gray-900';const hoursClass=(b.hours==='No definido'||!b.hours)?'text-red-strong':'text-gray-900';return `<div class="pb-20 sm:pb-28 min-h-screen">${Header()}<div class="max-w-5xl mx-auto mt-6 sm:mt-10 px-4 sm:px-6"><div class="glass overflow-hidden shadow-2xl fade-in border-2 border-yellow-500/20"><div class="profile-header-container relative overflow-hidden px-4 sm:px-8 pt-4 sm:pt-6 pb-4 sm:pb-6 shine"><div class="absolute inset-0 bg-black/5"></div><button onclick="state.view='list'; render();" class="back-button absolute top-6 left-6 w-12 h-12 flex items-center justify-center text-white hover:bg-white/40 transition-all shadow-lg z-10"><i class="fas fa-arrow-left text-xl"></i></button><div class="relative z-10 mt-8"><div class="flex flex-col md:flex-row items-center md:items-start gap-3 mb-3"><div class="p-2 glass shadow-2xl flex-shrink-0"><img src="${b.logo_url||'https://via.placeholder.com/200/d4af37/000000?text=Logo'}" class="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl object-cover" onerror="this.src='https://via.placeholder.com/200/d4af37/000000?text=Logo'"></div><div class="flex-1 text-center md:text-left mt-1"><h2 class="text-2xl sm:text-3xl font-bold business-name-white mb-2 drop-shadow-sm">${b.name}</h2>${b.category?`<span class="inline-block px-4 py-2 category-badge-white-gold rounded-full text-sm shadow-lg"><i class="fas fa-tag mr-2"></i>${b.category}</span>`:''}</div></div></div>${state.user&&b.user_id===state.user.id?`<div class="absolute top-6 right-6 z-10"><button onclick="deleteBusiness('${b.id}')" class="px-4 sm:px-6 py-3 sm:py-4 gradient-red text-white rounded-2xl font-bold transition-all shadow-lg hover:scale-105"><i class="fas fa-trash mr-2"></i><span class="hidden sm:inline">Eliminar</span></button></div>`:''}</div>${b.rating>0?`<div class="px-4 sm:px-8 py-5"><div class="max-w-3xl mx-auto"><div class="rating-container-profile flex items-center justify-center gap-4"><i class="fas fa-star text-yellow-400 text-3xl"></i><div><p class="text-4xl font-bold text-white">${b.rating}</p><p class="text-sm text-white/90">${b.total_ratings} ${b.total_ratings===1?'reseña':'reseñas'}</p></div></div></div></div>`:''}<div class="px-4 sm:px-8 py-6 sm:py-8">${b.description?`<div class="mb-6"><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-3 form-label-icon"><i class="fas fa-info-circle"></i><span>Descripción</span></h4><div class="section-card-gold-border p-6 sm:p-8 shadow-lg gradient-yellow-pale"><p class="text-gray-900 font-bold leading-relaxed text-base sm:text-lg">${b.description}</p></div></div>`:''} ${b.services?`<div class="mb-6"><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-3 form-label-icon"><i class="fas fa-list-ul"></i><span>Servicios</span></h4><div class="section-card-gold-border p-6 sm:p-8 shadow-lg gradient-yellow-pale"><p class="text-gray-900 font-bold leading-relaxed text-base sm:text-lg">${b.services}</p></div></div>`:''}<div class="info-container-white mb-8"><div class="space-y-5"><section><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-4 form-label-icon"><i class="fas fa-info-circle"></i><span>Contacto</span></h4><div class="space-y-3">${b.phone?`<div class="section-card-gold-border flex items-center gap-4 p-4"><div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-phone icon-phone text-xl"></i></div><div class="flex-1 min-w-0"><p class="text-xs text-gray-500 mb-1">Teléfono</p><p class="font-semibold text-gray-900 break-all">${b.phone}</p></div></div>`:''}${b.address?`<div class="section-card-gold-border flex items-start gap-4 p-4"><div class="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marked-alt text-red-500 text-xl"></i></div><div class="flex-1 min-w-0"><p class="text-xs text-gray-500 mb-1">Dirección</p><p class="font-semibold text-gray-900 break-words">${b.address}, León, Gto.</p></div></div>`:''}</div></section>${b.representative?`<section><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-4 form-label-icon"><i class="fas fa-user-tie"></i><span>Representante</span></h4><div class="section-card-gold-border p-6"><p class="font-semibold text-gray-900 break-words">${b.representative}</p></div></section>`:''}<section><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-4 form-label-icon"><i class="fas fa-clock"></i><span>Horario</span></h4><div class="section-card-gold-border p-6 space-y-3"><div class="flex items-center justify-between py-2 border-b border-gray-300"><span class="text-gray-600 font-medium">Días</span><span class="font-bold ${daysClass} text-right break-words ml-4">${displayDays}</span></div><div class="flex items-center justify-between py-2"><span class="text-gray-600 font-medium">Horario</span><span class="font-bold ${hoursClass} text-right break-words ml-4">${b.hours||'No definido'}</span></div></div></section>${b.phone?`<section><div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4"><button onclick="openWhatsApp('${b.phone}','${b.name.replace(/'/g,"\\'")}' )" class="w-full whatsapp-button text-white py-4 rounded-xl font-bold shadow-lg transition-all flex items-center justify-center gap-3 hover:scale-105"><i class="fab fa-whatsapp text-2xl"></i><span>WhatsApp</span></button><button onclick="makeCall('${b.phone}')" class="w-full btn-call py-4 rounded-xl font-bold shadow-lg transition-all flex items-center justify-center gap-3"><i class="fas fa-phone text-xl"></i><span>Llamar</span></button></div></section>`:''}</div></div>${state.user?`<div class="glass-light p-6 sm:p-8 border-2 border-yellow-500/20 mb-8"><h4 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6"><i class="fas fa-star text-yellow-600 mr-2"></i>Deja tu opinión</h4><form onsubmit="handleReview(event, '${b.id}')" class="space-y-6"><div><label class="block text-sm font-bold text-gray-700 mb-3">Calificación *</label><div class="flex gap-2 sm:gap-3 justify-center">${[1,2,3,4,5].map(i=>`<button type="button" onclick="selectRating(${i})" class="star-rating-btn text-4xl sm:text-5xl transition-all hover:scale-125"><span class="${state.selectedRating>=i?'text-yellow-500':'text-gray-400'}">★</span></button>`).join('')}</div></div><div><label class="block text-sm font-bold text-gray-700 mb-3">Comentario (opcional)</label><textarea id="review-comment" rows="4" placeholder="Comparte..." class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none"></textarea></div><div class="flex justify-center"><button type="submit" class="gradient-blue-dark text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:scale-105 transition-all"><i class="fas fa-paper-plane mr-2"></i>Publicar</button></div></form></div>`:`<div class="glass-light p-8 text-center mb-8 border-2 border-gray-300"><i class="fas fa-lock text-4xl text-gray-400 mb-4"></i><p class="text-gray-600 mb-4">Inicia sesión</p><button onclick="changeView('login')" class="btn-gold text-black px-8 py-3 rounded-xl font-bold shadow-xl hover:scale-105 transition-all">Iniciar Sesión</button></div>`}<div class="border-t-2 border-gray-300 pt-8"><h4 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6"><i class="fas fa-comments text-yellow-600 mr-2"></i>Reseñas (${b.reviews?.length||0})</h4>${(b.reviews&&b.reviews.length>0)?`<div class="space-y-4">${b.reviews.map(r=>`<div class="glass-light p-4 sm:p-6 hover:shadow-xl transition-all"><div class="flex items-start justify-between mb-3"><div class="flex items-center gap-3"><div class="w-10 h-10 sm:w-12 sm:h-12 gradient-gold rounded-full flex items-center justify-center text-black font-bold text-base sm:text-lg flex-shrink-0">${r.user_name.charAt(0).toUpperCase()}</div><div><p class="font-bold text-gray-900 break-words">${r.user_name}</p><p class="text-xs text-gray-500">${new Date(r.created_at).toLocaleDateString('es-MX')}</p></div></div><div class="flex gap-1 text-yellow-500 text-lg sm:text-xl flex-shrink-0 ml-2">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</div></div>${r.comment?`<p class="text-gray-700 leading-relaxed break-words">${r.comment}</p>`:''}</div>`).join('')}</div>`:`<div class="text-center py-12 glass-light"><i class="fas fa-inbox text-6xl text-gray-300 mb-4"></i><p class="text-gray-600">Aún no hay reseñas</p></div>`}</div></div></div></div>${Footer()}</div>`;};
-async function handleAuth(e){e.preventDefault();const email=document.getElementById('email').value.trim();const password=document.getElementById('password').value;if(state.view==='login'){const result=await loginUser(email,password);if(result.success){if(state.keepLoggedIn)localStorage.setItem('keepLoggedIn','true');await loadBusinesses();state.view='list';render();}else{const err=getAuthErrorMessage(result.error);showModal(err.title,err.message,err.type);}}else{const confirmPassword=document.getElementById('confirmPassword').value;if(password!==confirmPassword){showModal('Error','Las contraseñas no coinciden.','error');return;}const result=await registerUser(email,password,confirmPassword);if(result.success){const msg=result.requiresConfirmation?'Cuenta creada. Revisa tu correo.':'Cuenta creada.';showModal('¡Éxito!',msg,'success');setTimeout(()=>{state.view='login';render();},2000);}else{const err=getAuthErrorMessage(result.error);showModal(err.title,err.message,err.type);}}}
-function handleForgotPassword(){const modal=document.createElement('div');modal.className='modal-overlay fixed inset-0 z-50 flex items-center justify-center p-6';modal.innerHTML=`<div class="modal-content glass max-w-md w-full overflow-hidden shadow-2xl border-2 border-blue-500/30"><div class="bg-blue-500/10 p-6 border-b border-gray-300/50"><div class="flex items-center gap-4"><div class="w-16 h-16 rounded-full bg-white/50 flex items-center justify-center shadow-lg"><i class="fas fa-key text-4xl text-blue-500"></i></div><h3 class="text-2xl font-bold text-gray-900">Recuperar</h3></div></div><form id="forgot-password-form" class="p-6 space-y-5"><p class="text-gray-600 mb-4 text-base">Ingresa tu correo.</p><div><label class="block text-sm font-semibold text-gray-700 mb-2 form-label-icon"><i class="fas fa-envelope text-yellow-600"></i><span>Correo</span></label><input type="email" id="reset-email" required placeholder="tu@correo.com" class="w-full px-5 py-4 rounded-xl border-2 border-gray-300 bg-white text-gray-900 focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus transition-all"></div><div class="flex gap-3 pt-4"><button type="button" onclick="this.closest('.modal-overlay').remove()" class="flex-1 px-6 py-4 gradient-red text-white rounded-xl font-semibold transition-all hover:scale-105 hover:shadow-lg">Cancelar</button><button type="submit" class="flex-1 px-6 py-4 gradient-green text-white rounded-xl font-semibold transition-all hover:scale-105 hover:shadow-lg"><i class="fas fa-paper-plane mr-2"></i>Enviar</button></div></form></div>`;document.getElementById('modal-root').appendChild(modal);document.getElementById('forgot-password-form').addEventListener('submit',async(e)=>{e.preventDefault();const email=document.getElementById('reset-email').value.trim();const result=await resetPassword(email);modal.remove();if(result.success){showModal('Correo Enviado 📧','Revisa tu bandeja.','success');}else{const err=getAuthErrorMessage(result.error);showModal(err.title,err.message,err.type);}});}
-function handleLogo(e){const file=e.target.files[0];if(!file)return;if(file.size>10*1024*1024){showModal('Archivo Grande','Máx. 10MB','error');e.target.value='';return;}state.formData.logo=file;const reader=new FileReader();reader.onload=(event)=>{state.formData.logo_url=event.target.result;render();};reader.readAsDataURL(file);}
-async function handleBusinessSubmit(e){e.preventDefault();console.log('📝 Submit del formulario');const phoneInput=document.getElementById('phone').value.trim();const phoneDigits=phoneInput.replace(/\D/g,'');console.log('📞 Teléfono input:', phoneInput, 'Digits:', phoneDigits);state.formData.name=document.getElementById('name').value.trim().toUpperCase();state.formData.representative=document.getElementById('representative').value.trim();state.formData.category=document.getElementById('category').value.trim();state.formData.street=document.getElementById('street').value.trim();state.formData.colony=document.getElementById('colony').value.trim();state.formData.phone=phoneDigits;state.formData.hours=document.getElementById('hours')?.value.trim()||'No definido';state.formData.days=document.getElementById('days').value;state.formData.description=document.getElementById('description').value.trim();state.formData.services=document.getElementById('services').value.trim();state.formData.agreed=document.getElementById('agreed').checked;console.log('📊 State formData antes de guardar:', state.formData);await saveBusiness(state.formData);}
-async function handleReview(e,businessId){e.preventDefault();if(!state.selectedRating||state.selectedRating===0){showModal('Calificación Requerida','Selecciona 1-5 estrellas.','warning');return;}const comment=document.getElementById('review-comment')?.value.trim()||'';await saveReview(businessId,state.selectedRating,comment);}
-function handleSearchInput(e){state.tempSearchTerm=e.target.value;}
-function performSearch(){const input=document.getElementById('search');if(input){state.searchTerm=input.value;state.tempSearchTerm=input.value;render();}}
-function changeView(view){state.view=view;if(view==='list'){state.searchTerm='';state.tempSearchTerm='';}render();}
-function createBusiness(){if(!state.user){showModal('Sesión Requerida','Inicia sesión primero','warning');changeView('login');return;}resetForm();state.currentBusiness=null;state.view='form';render();}
-function editBusiness(id){const business=state.businesses.find(b=>b.id===id);if(!business)return;const parts=business.address.split(',').map(s=>s.trim());const street=parts.length>1?parts[0]:'';const colony=parts.length>1?parts[1]:'';state.currentBusiness=business;state.formData={name:business.name||'',representative:business.representative||'',category:business.category||'',street:street,colony:colony,phone:business.phone||'',hours:business.hours||'No definido',days:business.days||'No definido',description:business.description||'',services:business.services||'',logo:null,logo_url:business.logo_url||'',agreed:false};state.enableHours=business.hours&&business.hours!=='No definido';state.showCustomDays=business.days==='Otro';state.view='form';render();}
-function viewBusiness(id){const business=state.businesses.find(b=>b.id===id);if(!business)return;state.currentBusiness=business;state.view='profile';state.selectedRating=0;render();}
-function render(){const views={login:LoginView,register:LoginView,form:FormView,list:ListView,profile:ProfileView};document.getElementById('app').innerHTML=(views[state.view]||LoginView)();window.scrollTo({top:0,behavior:'smooth'});}
-(async function init(){try{const hashParams=new URLSearchParams(window.location.hash.substring(1));const type=hashParams.get('type');if(type==='recovery'){state.isPasswordReset=true;showPasswordResetModal();return;}const{data,error}=await supabaseClient.auth.getSession();if(data.session){state.user=data.session.user;state.view='list';if(localStorage.getItem('keepLoggedIn'))state.keepLoggedIn=true;}await loadBusinesses();render();supabaseClient.auth.onAuthStateChange(async(event,session)=>{const currentHash=window.location.hash;const isRecoveryUrl=currentHash.includes('type=recovery');if(event==='PASSWORD_RECOVERY'||(event==='SIGNED_IN'&&isRecoveryUrl)){state.isPasswordReset=true;state.user=session?.user||null;showPasswordResetModal();}else if(event==='SIGNED_IN'&&!state.isPasswordReset){state.user=session?.user||null;state.view='list';await loadBusinesses();render();}else if(event==='SIGNED_OUT'){state.user=null;state.view='login';window.history.replaceState(null,'',window.location.pathname);render();}});}catch(error){showModal('Error','Error al cargar.','error');}})();
+
+const ProfileView=()=>{const b=state.currentBusiness;if(!b)return '';const displayDays=b.days==='Otro'&&b.custom_days?b.custom_days:b.days;const daysClass=(b.days==='No definido'||!b.days)?'text-red-strong':'text-gray-900';const hoursClass=(b.hours==='No definido'||!b.hours)?'text-red-strong':'text-gray-900';return `<div class="pb-20 sm:pb-28 min-h-screen">${Header()}<div class="max-w-5xl mx-auto mt-6 sm:mt-10 px-4 sm:px-6"><div class="glass overflow-hidden shadow-2xl fade-in border-2 border-yellow-500/20"><div class="profile-header-container relative overflow-hidden px-4 sm:px-8 pt-4 sm:pt-6 pb-4 sm:pb-6 shine"><div class="absolute inset-0 bg-black/5"></div><button onclick="state.view='list'; render();" class="back-button absolute top-6 left-6 w-12 h-12 flex items-center justify-center text-white hover:bg-white/40 transition-all shadow-lg z-10"><i class="fas fa-arrow-left text-xl"></i></button><div class="relative z-10 mt-8"><div class="flex flex-col md:flex-row items-center md:items-start gap-3 mb-3"><div class="p-2 glass shadow-2xl flex-shrink-0"><img src="${b.logo_url||'https://via.placeholder.com/200/d4af37/000000?text=Logo'}" class="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl object-cover" onerror="this.src='https://via.placeholder.com/200/d4af37/000000?text=Logo'"></div><div class="flex-1 text-center md:text-left mt-1"><h2 class="text-2xl sm:text-3xl font-bold business-name-white mb-2 drop-shadow-sm">${b.name}</h2>${b.category?`<span class="inline-block px-4 py-2 category-badge-white-gold rounded-full text-sm shadow-lg"><i class="fas fa-tag mr-2"></i>${b.category}</span>`:''}</div></div></div>${state.user&&b.user_id===state.user.id?`<div class="absolute top-6 right-6 z-10"><button onclick="deleteBusiness('${b.id}')" class="px-4 sm:px-6 py-3 sm:py-4 gradient-red text-white rounded-2xl font-bold transition-all shadow-lg hover:scale-105"><i class="fas fa-trash mr-2"></i><span class="hidden sm:inline">Eliminar</span></button></div>`:''}</div>${b.rating>0?`<div class="px-4 sm:px-8 py-5"><div class="max-w-3xl mx-auto"><div class="rating-container-profile flex items-center justify-center gap-4"><i class="fas fa-star text-yellow-400 text-3xl"></i><div><p class="text-4xl font-bold text-white">${b.rating}</p><p class="text-sm text-white/90">${b.total_ratings} ${b.total_ratings===1?'reseña':'reseñas'}</p></div></div></div></div>`:''}<div class="px-4 sm:px-8 py-6 sm:py-8">${b.description?`<div class="mb-6"><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-3 form-label-icon"><i class="fas fa-info-circle"></i><span>Descripción</span></h4><div class="section-card-gold-border p-6 sm:p-8 shadow-lg gradient-yellow-pale"><p class="text-gray-900 font-bold leading-relaxed text-base sm:text-lg">${b.description}</p></div></div>`:''} ${b.services?`<div class="mb-6"><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-3 form-label-icon"><i class="fas fa-list-ul"></i><span>Servicios</span></h4><div class="section-card-gold-border p-6 sm:p-8 shadow-lg gradient-yellow-pale"><p class="text-gray-900 font-bold leading-relaxed text-base sm:text-lg">${b.services}</p></div></div>`:''}<div class="info-container-white mb-8"><div class="space-y-5"><section><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-4 form-label-icon"><i class="fas fa-info-circle"></i><span>Contacto</span></h4><div class="space-y-3">${b.phone?`<div class="section-card-gold-border flex items-center gap-4 p-4"><div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-phone icon-phone text-xl"></i></div><div class="flex-1 min-w-0"><p class="text-xs text-gray-500 mb-1">Teléfono</p><p class="font-semibold text-gray-900 break-all">${b.phone}</p></div></div>`:''}${b.address?`<div class="section-card-gold-border flex items-start gap-4 p-4"><div class="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marked-alt text-red-500 text-xl"></i></div><div class="flex-1 min-w-0"><p class="text-xs text-gray-500 mb-1">Dirección</p><p class="font-semibold text-gray-900 break-words">${b.address}, León, Gto.</p></div></div>`:''}</div></section>${b.representative?`<section><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-4 form-label-icon"><i class="fas fa-user-tie"></i><span>Representante</span></h4><div class="section-card-gold-border p-6"><p class="font-semibold text-gray-900 break-words">${b.representative}</p></div></section>`:''}<section><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-4 form-label-icon"><i class="fas fa-clock icon-clock-blue"></i><span>Horario</span></h4><div class="section-card-gold-border p-6 space-y-3"><div class="flex items-center justify-between py-2 border-b border-gray-300"><span class="text-gray-600 font-medium">Días</span><span class="font-bold ${daysClass} text-right break-words ml-4">${displayDays}</span></div><div class="flex items-center justify-between py-2"><span class="text-gray-600 font-medium">Horario</span><span class="font-bold ${hoursClass} text-right break-words ml-4">${b.hours||'No definido'}</span></div></div></section>${b.phone?`<section><div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4"><button onclick="openWhatsApp('${b.phone}','${b.name.replace(/'/g,"\\'")}' )" class="w-full whatsapp-button text-white py-4 rounded-xl font-bold shadow-lg transition-all flex items-center justify-center gap-3 hover:scale-105"><i class="fab fa-whatsapp text-2xl"></i><span>WhatsApp</span></button><button onclick="makeCall('${b.phone}')" class="w-full btn-call py-4 rounded-xl font-bold shadow-lg transition-all flex items-center justify-center gap-3"><i class="fas fa-phone text-xl"></i><span>Llamar</span></button></div></section>`:''}</div></div>${state.user?`<div class="glass-light p-6 sm:p-8 border-2 border-yellow-500/20 mb-8"><h4 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6"><i class="fas fa-star text-yellow-600 mr-2"></i>Deja tu opinión</h4><form onsubmit="handleReview(event, '${b.id}')" class="space-y-6"><div><label class="block text-sm font-bold text-gray-700 mb-3">Calificación *</label><div class="flex gap-2 sm:gap-3 justify-center">${[1,2,3,4,5].map(i=>`<button type="button" onclick="selectRating(${i})" class="star-rating-btn text-4xl sm:text-5xl transition-all hover:scale-125"><span class="${state.selectedRating>=i?'text-yellow-500':'text-gray-400'}">★</span></button>`).join('')}</div></div><div><label class="block text-sm font-bold text-gray-700 mb-3">Comentario (opcional)</label><textarea id="review-comment" rows="4" placeholder="Comparte..." class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none"></textarea></div><div class="flex justify-center"><button type="submit" class="gradient-blue-dark text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:scale-105 transition-all"><i class="fas fa-paper-plane mr-2"></i>Publicar</button></div></form></div>`:`<div class="glass-light p-8 text-center mb-8 border-2 border-gray-300"><i class="fas fa-lock text-4xl text-gray-400 mb-4"></i><p class="text-gray-600 mb-4">Inicia sesión</p><button onclick="changeView('login')" class="btn-gold text-black px-8 py-3 rounded-xl font-bold shadow-xl hover:scale-105 transition-all">Iniciar Sesión</button></div>`}<div class="border-t-2 border-gray-300 pt-8"><h4 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6"><i class="fas fa-comments text-yellow-600 mr-2"></i>Reseñas (${b.reviews?.length||0})</h4>${(b.reviews&&b.reviews.length>0)?`<div class="space-y-4">${b.reviews.map(r=>`<div class="glass-light p-4 sm:p-6 hover:shadow-xl transition-all"><div class="flex items-start justify-between mb-3"><div class="flex items-center gap-3"><div class="w-10 h-10 sm:w-12 sm:h-12 gradient-gold rounded-full flex items-center justify-center text-black font-bold text-base sm:text-lg flex-shrink-0">${r.user_name.charAt(0).toUpperCase()}</div><div><p class="font-bold text-gray-900 break-words">${r.user_name}</p><p class="text-xs text-gray-500">${new Date(r.created_at).toLocaleDateString('es-MX')}</p></div></div><div class="flex gap-1 text-yellow-500 text-lg sm:text-xl flex-shrink-0 ml-2">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</div></div>${r.comment?`<p class="text-gray-700 leading-relaxed break-words">${r.comment}</p>`:''}</div>`).join('')}</div>`:`<div class="text-center py-12 glass-light"><i class="fas fa-inbox text-6xl text-gray-300 mb-4"></i><p class="text-gray-600">Aún no hay reseñas</p></div>`}</div></div></div></div>${Footer()}</div>`;};
+
+async function handleAuth(e){
+    e.preventDefault();
+    const email=document.getElementById('email').value.trim();
+    const password=document.getElementById('password').value;
+    if(state.view==='login'){
+        const result=await loginUser(email,password);
+        if(result.success){
+            if(state.keepLoggedIn)localStorage.setItem('keepLoggedIn','true');
+            await loadBusinesses();
+            state.view='list';
+            render();
+        }else{
+            const err=getAuthErrorMessage(result.error);
+            showModal(err.title,err.message,err.type);
+        }
+    }else{
+        const confirmPassword=document.getElementById('confirmPassword').value;
+        if(password!==confirmPassword){
+            showModal('Error','Las contraseñas no coinciden.','error');
+            return;
+        }
+        const result=await registerUser(email,password,confirmPassword);
+        if(result.success){
+            const msg=result.requiresConfirmation?'Cuenta creada. Revisa tu correo.':'Cuenta creada.';
+            showModal('¡Éxito!',msg,'success');
+            setTimeout(()=>{
+                state.view='login';
+                render();
+            },2000);
+        }else{
+            const err=getAuthErrorMessage(result.error);
+            showModal(err.title,err.message,err.type);
+        }
+    }
+}
+
+function handleForgotPassword(){
+    const modal=document.createElement('div');
+    modal.className='modal-overlay fixed inset-0 z-50 flex items-center justify-center p-6';
+    modal.innerHTML=`<div class="modal-content glass max-w-md w-full overflow-hidden shadow-2xl border-2 border-blue-500/30"><div class="bg-blue-500/10 p-6 border-b border-gray-300/50"><div class="flex items-center gap-4"><div class="w-16 h-16 rounded-full bg-white/50 flex items-center justify-center shadow-lg"><i class="fas fa-key text-4xl text-blue-500"></i></div><h3 class="text-2xl font-bold text-gray-900">Recuperar</h3></div></div><form id="forgot-password-form" class="p-6 space-y-5"><p class="text-gray-600 mb-4 text-base">Ingresa tu correo.</p><div><label class="block text-sm font-semibold text-gray-700 mb-2 form-label-icon"><i class="fas fa-envelope text-yellow-600"></i><span>Correo</span></label><input type="email" id="reset-email" required placeholder="tu@correo.com" class="w-full px-5 py-4 rounded-xl border-2 border-gray-300 bg-white text-gray-900 focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus transition-all"></div><div class="flex gap-3 pt-4"><button type="button" onclick="this.closest('.modal-overlay').remove()" class="flex-1 px-6 py-4 gradient-red text-white rounded-xl font-semibold transition-all hover:scale-105 hover:shadow-lg">Cancelar</button><button type="submit" class="flex-1 px-6 py-4 gradient-green text-white rounded-xl font-semibold transition-all hover:scale-105 hover:shadow-lg"><i class="fas fa-paper-plane mr-2"></i>Enviar</button></div></form></div>`;
+    document.getElementById('modal-root').appendChild(modal);
+    document.getElementById('forgot-password-form').addEventListener('submit',async(e)=>{
+        e.preventDefault();
+        const email=document.getElementById('reset-email').value.trim();
+        const result=await resetPassword(email);
+        modal.remove();
+        if(result.success){
+            showModal('Correo Enviado 📧','Revisa tu bandeja.','success');
+        }else{
+            const err=getAuthErrorMessage(result.error);
+            showModal(err.title,err.message,err.type);
+        }
+    });
+}
+
+function handleLogo(e){
+    const file=e.target.files[0];
+    if(!file)return;
+    if(file.size>10*1024*1024){
+        showModal('Archivo Grande','Máx. 10MB','error');
+        e.target.value='';
+        return;
+    }
+    state.formData.logo=file;
+    const reader=new FileReader();
+    reader.onload=(event)=>{
+        state.formData.logo_url=event.target.result;
+        render();
+    };
+    reader.readAsDataURL(file);
+}
+
+async function handleBusinessSubmit(e){
+    e.preventDefault();
+    console.log('📝 Submit del formulario');
+    const phoneInput=document.getElementById('phone').value.trim();
+    const phoneDigits=phoneInput.replace(/\D/g,'');
+    console.log('📞 Teléfono input:', phoneInput, 'Digits:', phoneDigits);
+    state.formData.name=document.getElementById('name').value.trim().toUpperCase();
+    state.formData.representative=document.getElementById('representative').value.trim();
+    state.formData.category=document.getElementById('category').value.trim();
+    state.formData.street=document.getElementById('street').value.trim();
+    state.formData.colony=document.getElementById('colony').value.trim();
+    state.formData.phone=phoneDigits;
+    state.formData.hours=document.getElementById('hours')?.value.trim()||'No definido';
+    state.formData.days=document.getElementById('days').value;
+    state.formData.description=document.getElementById('description').value.trim();
+    state.formData.services=document.getElementById('services').value.trim();
+    state.formData.agreed=document.getElementById('agreed').checked;
+    console.log('📊 State formData antes de guardar:', state.formData);
+    await saveBusiness(state.formData);
+}
+
+async function handleReview(e,businessId){
+    e.preventDefault();
+    if(!state.selectedRating||state.selectedRating===0){
+        showModal('Calificación Requerida','Selecciona 1-5 estrellas.','warning');
+        return;
+    }
+    const comment=document.getElementById('review-comment')?.value.trim()||'';
+    await saveReview(businessId,state.selectedRating,comment);
+}
+
+function handleSearchInput(e){
+    state.tempSearchTerm=e.target.value;
+}
+
+function performSearch(){
+    const input=document.getElementById('search');
+    if(input){
+        state.searchTerm=input.value;
+        state.tempSearchTerm=input.value;
+        render();
+    }
+}
+
+function changeView(view){
+    state.view=view;
+    if(view==='list'){
+        state.searchTerm='';
+        state.tempSearchTerm='';
+    }
+    render();
+}
+
+function createBusiness(){
+    if(!state.user){
+        showModal('Sesión Requerida','Inicia sesión primero','warning');
+        changeView('login');
+        return;
+    }
+    resetForm();
+    state.currentBusiness=null;
+    state.view='form';
+    render();
+}
+
+function editBusiness(id){
+    const business=state.businesses.find(b=>b.id===id);
+    if(!business)return;
+    const parts=business.address.split(',').map(s=>s.trim());
+    const street=parts.length>1?parts[0]:'';
+    const colony=parts.length>1?parts[1]:'';
+    state.currentBusiness=business;
+    state.formData={
+        name:business.name||'',
+        representative:business.representative||'',
+        category:business.category||'',
+        street:street,
+        colony:colony,
+        phone:business.phone||'',
+        hours:business.hours||'No definido',
+        days:business.days||'No definido',
+        description:business.description||'',
+        services:business.services||'',
+        logo:null,
+        logo_url:business.logo_url||'',
+        agreed:false
+    };
+    state.view='form';
+    render();
+}
+
+function viewBusiness(id){
+    const business=state.businesses.find(b=>b.id===id);
+    if(!business)return;
+    state.currentBusiness=business;
+    state.view='profile';
+    state.selectedRating=0;
+    render();
+}
+
+function render(){
+    const views={login:LoginView,register:LoginView,form:FormView,list:ListView,profile:ProfileView};
+    document.getElementById('app').innerHTML=(views[state.view]||LoginView)();
+    window.scrollTo({top:0,behavior:'smooth'});
+    cleanupMemory(); // Limpiar memoria después de cada render
+}
+
+(async function init(){
+    try{
+        const hashParams=new URLSearchParams(window.location.hash.substring(1));
+        const type=hashParams.get('type');
+        if(type==='recovery'){
+            state.isPasswordReset=true;
+            showPasswordResetModal();
+            return;
+        }
+        const{data,error}=await supabaseClient.auth.getSession();
+        if(data.session){
+            state.user=data.session.user;
+            state.view='list';
+            if(localStorage.getItem('keepLoggedIn'))state.keepLoggedIn=true;
+        }
+        await loadBusinesses();
+        render();
+        supabaseClient.auth.onAuthStateChange(async(event,session)=>{
+            const currentHash=window.location.hash;
+            const isRecoveryUrl=currentHash.includes('type=recovery');
+            if(event==='PASSWORD_RECOVERY'||(event==='SIGNED_IN'&&isRecoveryUrl)){
+                state.isPasswordReset=true;
+                state.user=session?.user||null;
+                showPasswordResetModal();
+            }else if(event==='SIGNED_IN'&&!state.isPasswordReset){
+                state.user=session?.user||null;
+                state.view='list';
+                await loadBusinesses();
+                render();
+            }else if(event==='SIGNED_OUT'){
+                state.user=null;
+                state.view='login';
+                window.history.replaceState(null,'',window.location.pathname);
+                render();
+            }
+        });
+    }catch(error){
+        showModal('Error','Error al cargar.','error');
+    }
+})();
 </script>
 </body>
 </html>

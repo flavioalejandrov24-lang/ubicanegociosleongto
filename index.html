@@ -33,12 +33,13 @@
         .gradient-black-white-bg { background: linear-gradient(135deg, #ffffff 0%, #4a4a4a 50%, #ffffff 100%); }
         .gradient-green-intense { background: linear-gradient(135deg, rgba(22, 163, 74, 0.98) 0%, rgba(21, 128, 61, 0.98) 100%); }
         .gradient-green { background: linear-gradient(135deg, rgba(34, 197, 94, 0.95) 0%, rgba(22, 163, 74, 0.95) 100%); }
+        .gradient-green-strong { background: linear-gradient(135deg, #16a34a 0%, #15803d 100%); }
         .gradient-green-translucent { background: linear-gradient(135deg, rgba(34, 197, 94, 0.7) 0%, rgba(22, 163, 74, 0.7) 100%); }
         .gradient-blue { background: linear-gradient(135deg, rgba(59, 130, 246, 0.95) 0%, rgba(37, 99, 235, 0.95) 100%); }
         .gradient-blue-strong { background: linear-gradient(135deg, rgba(30, 64, 175, 0.95) 0%, rgba(37, 99, 235, 0.95) 100%); }
         .gradient-navy-blue { background: linear-gradient(135deg, rgba(30, 58, 138, 0.95) 0%, rgba(30, 64, 175, 0.95) 50%, rgba(59, 130, 246, 0.95) 100%); }
         .gradient-red { background: linear-gradient(135deg, rgba(220, 38, 38, 0.95) 0%, rgba(185, 28, 28, 0.95) 100%); }
-        .gradient-yellow-white-soft { background: linear-gradient(135deg, #fef9e7 0%, #fffbf0 50%, #ffffff 100%); }
+        .gradient-yellow-pale { background: linear-gradient(135deg, #fef9e7 0%, #fffbf0 50%, #ffffff 100%); }
         .gradient-gold-text { background: linear-gradient(135deg, #d4af37 0%, #1a1a1a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .gradient-gold-text-animated { background: linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shine-text 3s infinite; background-size: 200% 200%; }
         @keyframes shine-text { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
@@ -73,22 +74,22 @@
         .back-button { background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.4); transition: all 0.3s ease; border-radius: 16px; }
         .back-button:hover { background: rgba(255, 255, 255, 0.4); transform: scale(1.05); }
         .profile-header-container { background: linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%); box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3); position: relative; }
+        .profile-bg-yellow { background: linear-gradient(135deg, #fef9e7 0%, #fffbf0 50%, #ffffff 100%); }
         .rating-container-profile { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(15px); border-radius: 24px; padding: 20px; box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5); }
-        .section-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); transition: all 0.3s ease; border-radius: 20px; }
-        .section-card-gold-border { background: rgba(255, 255, 255, 0.98); border: 2px solid transparent; border-image: linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%) 1; box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3); border-radius: 20px; }
-        .section-card:hover { box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15); transform: translateY(-3px); }
-        .info-container-white { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); border-radius: 24px; padding: 32px; box-shadow: 0 8px 30px rgba(212, 175, 55, 0.2); }
+        .section-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); transition: all 0.3s ease; border-radius: 24px; border: 2px solid #d4af37; }
+        .section-card:hover { box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4); transform: translateY(-3px); }
+        .info-container-white { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); border-radius: 24px; padding: 32px; box-shadow: 0 8px 30px rgba(212, 175, 55, 0.2); border: 2px solid #d4af37; }
         .form-label-icon { display: inline-flex; align-items: center; gap: 12px; }
         .form-label-icon i { min-width: 20px; }
         .business-name-white { color: white; font-weight: 800; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
         .delete-account-gold { color: #d4af37 !important; font-weight: 700; }
         .title-gold-dark { color: #b8941e; font-weight: 700; }
         .card-text-bold { font-weight: 700; }
-        .map-container { width: 100%; height: 350px; border-radius: 20px; overflow: hidden; margin-top: 16px; border: 2px solid rgba(212, 175, 55, 0.3); pointer-events: auto; touch-action: pan-x pan-y pinch-zoom; }
-        .map-selector { width: 100%; height: 400px; border-radius: 20px; overflow: hidden; border: 2px solid rgba(212, 175, 55, 0.3); pointer-events: auto; touch-action: pan-x pan-y pinch-zoom; }
+        .map-container { width: 100%; height: 350px; border-radius: 24px; overflow: hidden; margin-top: 16px; border: 2px solid #d4af37; pointer-events: auto; touch-action: pan-x pan-y pinch-zoom; }
+        .map-selector { width: 100%; height: 400px; border-radius: 24px; overflow: hidden; border: 2px solid rgba(212, 175, 55, 0.3); pointer-events: auto; touch-action: pan-x pan-y pinch-zoom; }
         .text-red-strong { color: #dc2626; font-weight: 700; }
-        .whatsapp-button { background: linear-gradient(135deg, rgba(34, 197, 94, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%); }
-        .whatsapp-button:hover { background: linear-gradient(135deg, rgba(22, 163, 74, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4); }
+        .whatsapp-button { background: linear-gradient(135deg, #16a34a 0%, #15803d 100%); transition: all 0.3s ease; }
+        .whatsapp-button:hover { background: linear-gradient(135deg, #15803d 0%, #166534 100%); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(22, 163, 74, 0.4); }
         @media (max-width: 640px) { .card-hover:hover { transform: translateY(-6px); } }
         .shine { position: relative; overflow: hidden; }
         .shine::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent); animation: shine 3s infinite; z-index: 1; }
@@ -110,7 +111,7 @@
                 persistSession: true, 
                 detectSessionInUrl: true,
                 storage: window.localStorage,
-                storageKey: 'ubicanegoleon-session-v2'
+                storageKey: 'ubicanegoleon-session-v3-final'
             }
         });
 
@@ -270,20 +271,20 @@
             }
         }
 
+        // 🔥 VERSIÓN SIN SUPABASE STORAGE - GUARDA BASE64 DIRECTO EN BD
         async function saveBusiness(formData) {
-            console.log('💾 Iniciando guardado de negocio...');
-            console.log('📋 Datos recibidos:', formData);
+            console.log('💾 ============================================');
+            console.log('💾 GUARDANDO NEGOCIO (BASE64 en BD)');
+            console.log('💾 ============================================');
             
+            // VALIDACIONES
             if (!formData.name || formData.name.trim() === '') { 
                 showModal('Campo Obligatorio', 'El nombre es obligatorio.', 'warning'); 
                 return; 
             }
+            
             if (!formData.address || formData.address.trim() === '') { 
                 showModal('Campo Obligatorio', 'La dirección es obligatoria.', 'warning'); 
-                return; 
-            }
-            if (!formData.agreed) { 
-                showModal('Confirmación Requerida', 'Confirma los datos.', 'warning'); 
                 return; 
             }
             
@@ -293,57 +294,34 @@
                 return; 
             }
             
+            if (!formData.agreed) { 
+                showModal('Confirmación Requerida', 'Confirma los datos.', 'warning'); 
+                return; 
+            }
+            
             try {
-                let logoUrl = formData.logo_url || null;
-                
-                if (formData.logo instanceof File) {
-                    try {
-                        console.log('📤 Subiendo logo...');
-                        const fileExt = formData.logo.name.split('.').pop(); 
-                        const fileName = `${state.user.id}_${Date.now()}.${fileExt}`;
-                        const { data: uploadData, error: uploadError } = await supabaseClient.storage
-                            .from('business-logos')
-                            .upload(fileName, formData.logo, { 
-                                cacheControl: '3600', 
-                                upsert: true 
-                            });
-                        
-                        if (uploadError) {
-                            console.error('❌ Error subiendo logo:', uploadError);
-                            showModal('Advertencia', 'No se pudo subir el logo.', 'warning');
-                            logoUrl = null;
-                        } else {
-                            const { data: urlData } = supabaseClient.storage
-                                .from('business-logos')
-                                .getPublicUrl(fileName);
-                            logoUrl = urlData.publicUrl;
-                            console.log('✅ Logo subido:', logoUrl);
-                        }
-                    } catch (uploadError) {
-                        console.error('❌ Error en subida:', uploadError);
-                        logoUrl = null;
-                    }
-                }
+                // Logo ya está en base64 en formData.logo_url (del preview)
+                const logoUrl = formData.logo_url || null;
                 
                 const businessData = { 
                     name: formData.name.trim().toUpperCase(), 
                     representative: formData.representative.trim() || null, 
                     category: formData.category.trim() || null, 
-                    address: formData.address.trim() || null, 
-                    phone: formData.phone.trim(), 
+                    address: formData.address.trim(), 
+                    phone: phoneDigits, 
                     hours: formData.hours && formData.hours.trim() !== '' ? formData.hours.trim() : 'No definido', 
                     days: formData.days || 'No definido', 
                     custom_days: formData.days === 'Otro' ? (formData.custom_days.trim() || null) : null,
                     description: formData.description.trim() || null,
                     services: formData.services.trim() || null,
-                    logo_url: logoUrl, 
+                    logo_url: logoUrl, // BASE64 directo
                     city: 'León, Guanajuato', 
                     user_id: state.user.id,
                     latitude: formData.latitude || 21.1212,
                     longitude: formData.longitude || -101.6869
                 };
                 
-                console.log('📦 Datos a guardar:', businessData);
+                console.log('📦 Guardando en base de datos...');
                 
                 let saveResult;
                 if (state.currentBusiness) {
@@ -361,23 +339,24 @@
                         .select();
                 }
                 
-                console.log('📥 Resultado guardado:', saveResult);
-                
                 if (saveResult.error) {
                     console.error('❌ Error al guardar:', saveResult.error);
                     throw saveResult.error;
                 }
                 
-                console.log('✅ Negocio guardado exitosamente');
-                showModal('¡Éxito!', state.currentBusiness ? 'Negocio actualizado' : 'Negocio registrado', 'success');
+                console.log('✅ ¡NEGOCIO GUARDADO EXITOSAMENTE!');
+                console.log('💾 ============================================');
+                
+                showModal('¡Éxito!', state.currentBusiness ? 'Negocio actualizado' : 'Negocio registrado exitosamente', 'success');
                 
                 await loadBusinesses(); 
                 state.view = 'list'; 
                 state.currentBusiness = null; 
                 resetForm(); 
                 render();
+                
             } catch (error) { 
-                console.error('❌ Error completo:', error);
+                console.error('❌ ERROR:', error);
                 showModal('Error al Guardar', 'Error: ' + (error.message || 'Desconocido'), 'error'); 
             }
         }
@@ -395,16 +374,13 @@
 
         async function saveReview(businessId, rating, comment) {
             console.log('⭐ Guardando reseña...');
-            console.log('📋 Datos:', { businessId, rating, comment, user: state.user?.id });
             
             if (!state.user) { 
-                console.error('❌ Usuario no autenticado');
                 showModal('Sesión Requerida', 'Inicia sesión.', 'warning'); 
                 return; 
             }
-            if (rating === 0 || !rating) { 
-                console.error('❌ Rating no seleccionado:', rating);
-                showModal('Calificación Requerida', 'Selecciona calificación (1-5 estrellas).', 'warning'); 
+            if (!rating || rating === 0) { 
+                showModal('Calificación Requerida', 'Selecciona de 1 a 5 estrellas.', 'warning'); 
                 return; 
             }
             
@@ -417,21 +393,14 @@
                     comment: comment.trim() 
                 };
                 
-                console.log('📦 Datos de reseña a guardar:', reviewData);
-                
                 const { data, error } = await supabaseClient
                     .from('reviews')
                     .insert([reviewData])
                     .select();
                 
-                console.log('📥 Resultado insert:', { data, error });
+                if (error) throw error;
                 
-                if (error) {
-                    console.error('❌ Error al guardar reseña:', error);
-                    throw error;
-                }
-                
-                console.log('✅ Reseña guardada exitosamente');
+                console.log('✅ Reseña guardada');
                 
                 await loadBusinesses(); 
                 state.selectedRating = 0; 
@@ -439,8 +408,8 @@
                 
                 setTimeout(() => render(), 500);
             } catch (error) { 
-                console.error('❌ Error completo saveReview:', error);
-                showModal('Error', 'No se pudo guardar: ' + (error.message || 'Error desconocido'), 'error'); 
+                console.error('❌ Error:', error);
+                showModal('Error', 'No se pudo guardar: ' + error.message, 'error'); 
             }
         }
 
@@ -547,7 +516,7 @@
 
         const FormView = () => {
             setTimeout(() => initMapSelector(), 300);
-            return `<div class="pb-24 sm:pb-28 min-h-screen">${Header()}<div class="max-w-4xl mx-auto mt-6 sm:mt-10 px-4 sm:px-6"><div class="glass p-6 sm:p-10 shadow-2xl fade-in border-2 border-yellow-500/20"><div class="mb-8"><h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2"><i class="fas fa-${state.currentBusiness ? 'edit' : 'plus-circle'} text-yellow-600 mr-3"></i>${state.currentBusiness ? 'Modificar Negocio' : 'Registrar Negocio'}</h2><p class="text-gray-600">Completa la información</p></div><form onsubmit="handleBusinessSubmit(event)" class="space-y-6"><div class="glass-light p-6 border-2 border-dashed border-yellow-500/30"><label class="block text-sm font-bold text-gray-700 mb-3 form-label-icon"><i class="fas fa-image text-yellow-600"></i><span>Logotipo del Negocio</span></label><div class="flex flex-col sm:flex-row items-center gap-6"><div class="w-full sm:w-40 h-40 image-upload-container rounded-2xl border-2 border-dashed border-gray-400 overflow-hidden bg-gray-100 flex items-center justify-center cursor-pointer hover:border-yellow-500/50 transition-all" onclick="document.getElementById('logo-input').click()">${state.formData.logo_url ? `<img src="${state.formData.logo_url}" class="image-preview-logo" alt="Preview">` : `<div class="text-center"><i class="fas fa-cloud-upload-alt text-5xl text-gray-400 mb-2"></i><p class="text-xs text-gray-500">Click para subir</p></div>`}</div><input type="file" id="logo-input" accept="image/*" onchange="handleLogo(event)" class="hidden"><div class="flex-1 text-center sm:text-left"><p class="text-sm text-gray-600 mb-2">Formatos: JPG, PNG (Máx. 10MB)</p><p class="text-xs text-gray-500">Click en el recuadro</p></div></div></div><div class="space-y-6"><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-store text-yellow-600"></i><span>Nombre del Negocio * (MAYÚSCULAS)</span></label><input type="text" id="name" required value="${state.formData.name}" placeholder="Ej: CAFÉ LA ESQUINA" oninput="forceUppercase(event); state.formData.name = this.value;" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus uppercase-force"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-user-tie text-yellow-600"></i><span>Representante</span></label><input type="text" id="representative" value="${state.formData.representative}" placeholder="Nombre del dueño" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-tag text-yellow-600"></i><span>Giro del Negocio</span></label><input type="text" id="category" value="${state.formData.category}" placeholder="Ej: Restaurante" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-map-marker-alt text-yellow-600"></i><span>Dirección *</span></label><input type="text" id="address" required value="${state.formData.address}" placeholder="Calle, número, colonia" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-phone text-yellow-600"></i><span>Teléfono * (10 dígitos)</span></label><input type="tel" id="phone" required value="${state.formData.phone}" placeholder="4771234567" inputmode="numeric" pattern="[0-9]*" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-calendar-alt text-yellow-600"></i><span>Días de Atención</span></label><select id="days" onchange="handleDaysChange(this.value)" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none cursor-pointer"><option ${state.formData.days === 'No definido' ? 'selected' : ''}>No definido</option><option ${state.formData.days === 'Lunes a Viernes' ? 'selected' : ''}>Lunes a Viernes</option><option ${state.formData.days === 'Solo fines de semana' ? 'selected' : ''}>Solo fines de semana</option><option ${state.formData.days === 'Todos los días de la semana' ? 'selected' : ''}>Todos los días de la semana</option><option ${state.formData.days === 'Otro' ? 'selected' : ''}>Otro</option></select></div>${state.showCustomDays ? `<div class="fade-in"><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-edit text-yellow-600"></i><span>Especifica los días</span></label><textarea id="custom-days" rows="2" placeholder="Ej: Martes y Jueves, Solo mañanas..." class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none">${state.formData.custom_days}</textarea></div>` : ''}<div><label class="flex items-center gap-3 mb-3 cursor-pointer"><input type="checkbox" id="enable-hours" ${state.enableHours ? 'checked' : ''} onchange="toggleHoursInput()" class="w-5 h-5 rounded border-gray-400 bg-white text-yellow-600 focus:ring-yellow-500"><span class="text-sm font-bold text-gray-700 form-label-icon"><i class="fas fa-clock text-yellow-600"></i><span>Especificar Horario</span></span></label><input type="text" id="hours" ${!state.enableHours ? 'disabled' : ''} value="${state.formData.hours}" placeholder="${state.enableHours ? 'Ej: 7:00 AM - 9:00 PM' : 'No definido'}" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus ${!state.enableHours ? 'opacity-50 cursor-not-allowed' : ''}"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-align-left text-yellow-600"></i><span>Descripción del Negocio</span></label><textarea id="description" rows="4" placeholder="Cuéntanos sobre tu negocio..." class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none gradient-yellow-white-soft">${state.formData.description}</textarea></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-list-ul text-yellow-600"></i><span>Servicios Ofrecidos</span></label><textarea id="services" rows="3" placeholder="Ej: Wifi, Estacionamiento, Terraza..." class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none">${state.formData.services}</textarea></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-map-marked-alt text-yellow-600"></i><span>Ubicación en Mapa (Opcional)</span></label><p class="text-xs text-gray-600 mb-3">Ajusta el mapa con zoom. Si no lo ajustas, se usa León centro.</p><div id="map-selector" class="map-selector"></div></div></div><label class="flex items-start gap-4 p-5 bg-yellow-500/10 rounded-2xl cursor-pointer border-2 border-yellow-500/30 hover:border-yellow-500/50 transition-all group"><input type="checkbox" id="agreed" ${state.formData.agreed ? 'checked' : ''} class="w-6 h-6 mt-1 rounded-lg border-2 border-yellow-600 bg-white text-yellow-600 focus:ring-yellow-500"><div class="flex-1"><p class="font-semibold text-yellow-700 group-hover:text-yellow-800"><i class="fas fa-shield-check mr-2"></i>Confirmo que los datos son correctos</p><p class="text-sm text-gray-600 mt-1">La información será visible para todos</p></div></label><div class="flex flex-col sm:flex-row gap-4 pt-4"><button type="button" onclick="changeView('list')" class="flex-1 py-4 gradient-red text-white rounded-xl font-bold transition-all hover:scale-105 hover:shadow-xl"><i class="fas fa-times mr-2"></i>Cancelar</button><button type="submit" class="flex-1 gradient-green text-white py-4 rounded-xl font-bold shadow-lg hover:scale-105 hover:shadow-xl transition-all"><i class="fas fa-save mr-2"></i>Guardar Negocio</button></div></form></div></div>${Footer()}</div>`;
+            return `<div class="pb-24 sm:pb-28 min-h-screen">${Header()}<div class="max-w-4xl mx-auto mt-6 sm:mt-10 px-4 sm:px-6"><div class="glass p-6 sm:p-10 shadow-2xl fade-in border-2 border-yellow-500/20"><div class="mb-8"><h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2"><i class="fas fa-${state.currentBusiness ? 'edit' : 'plus-circle'} text-yellow-600 mr-3"></i>${state.currentBusiness ? 'Modificar Negocio' : 'Registrar Negocio'}</h2><p class="text-gray-600">Completa la información</p></div><form onsubmit="handleBusinessSubmit(event)" class="space-y-6"><div class="glass-light p-6 border-2 border-dashed border-yellow-500/50"><label class="block text-sm font-bold text-gray-700 mb-3 form-label-icon"><i class="fas fa-image text-yellow-600"></i><span>Logotipo del Negocio</span></label><div class="flex flex-col sm:flex-row items-center gap-6"><div class="w-full sm:w-40 h-40 image-upload-container rounded-2xl border-2 border-dashed border-gray-400 overflow-hidden bg-gray-100 flex items-center justify-center cursor-pointer hover:border-yellow-500/50 transition-all" onclick="document.getElementById('logo-input').click()">${state.formData.logo_url ? `<img src="${state.formData.logo_url}" class="image-preview-logo" alt="Preview">` : `<div class="text-center"><i class="fas fa-cloud-upload-alt text-5xl text-gray-400 mb-2"></i><p class="text-xs text-gray-500">Click para subir</p></div>`}</div><input type="file" id="logo-input" accept="image/*" onchange="handleLogo(event)" class="hidden"><div class="flex-1 text-center sm:text-left"><p class="text-sm text-gray-600 mb-2">Formatos: JPG, PNG (Máx. 10MB)</p><p class="text-xs text-gray-500">Click en el recuadro</p></div></div></div><div class="space-y-6"><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-store text-yellow-600"></i><span>Nombre del Negocio * (MAYÚSCULAS)</span></label><input type="text" id="name" required value="${state.formData.name}" placeholder="Ej: CAFÉ LA ESQUINA" oninput="forceUppercase(event); state.formData.name = this.value;" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus uppercase-force"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-user-tie text-yellow-600"></i><span>Representante</span></label><input type="text" id="representative" value="${state.formData.representative}" placeholder="Nombre del dueño" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-tag text-yellow-600"></i><span>Giro del Negocio</span></label><input type="text" id="category" value="${state.formData.category}" placeholder="Ej: Restaurante" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-map-marker-alt text-yellow-600"></i><span>Dirección *</span></label><input type="text" id="address" required value="${state.formData.address}" placeholder="Calle, número, colonia" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-phone text-yellow-600"></i><span>Teléfono * (10 dígitos)</span></label><input type="tel" id="phone" required value="${state.formData.phone}" placeholder="4771234567" inputmode="numeric" pattern="[0-9]*" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-calendar-alt text-yellow-600"></i><span>Días de Atención</span></label><select id="days" onchange="handleDaysChange(this.value)" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none cursor-pointer"><option ${state.formData.days === 'No definido' ? 'selected' : ''}>No definido</option><option ${state.formData.days === 'Lunes a Viernes' ? 'selected' : ''}>Lunes a Viernes</option><option ${state.formData.days === 'Solo fines de semana' ? 'selected' : ''}>Solo fines de semana</option><option ${state.formData.days === 'Todos los días de la semana' ? 'selected' : ''}>Todos los días de la semana</option><option ${state.formData.days === 'Otro' ? 'selected' : ''}>Otro</option></select></div>${state.showCustomDays ? `<div class="fade-in"><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-edit text-yellow-600"></i><span>Especifica los días</span></label><textarea id="custom-days" rows="2" placeholder="Ej: Martes y Jueves, Solo mañanas..." class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none">${state.formData.custom_days}</textarea></div>` : ''}<div><label class="flex items-center gap-3 mb-3 cursor-pointer"><input type="checkbox" id="enable-hours" ${state.enableHours ? 'checked' : ''} onchange="toggleHoursInput()" class="w-5 h-5 rounded border-gray-400 bg-white text-yellow-600 focus:ring-yellow-500"><span class="text-sm font-bold text-gray-700 form-label-icon"><i class="fas fa-clock text-yellow-600"></i><span>Especificar Horario</span></span></label><input type="text" id="hours" ${!state.enableHours ? 'disabled' : ''} value="${state.formData.hours}" placeholder="${state.enableHours ? 'Ej: 7:00 AM - 9:00 PM' : 'No definido'}" class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus ${!state.enableHours ? 'opacity-50 cursor-not-allowed' : ''}"></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-align-left text-yellow-600"></i><span>Descripción del Negocio</span></label><textarea id="description" rows="4" placeholder="Cuéntanos sobre tu negocio..." class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none gradient-yellow-pale">${state.formData.description}</textarea></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-list-ul text-yellow-600"></i><span>Servicios Ofrecidos</span></label><textarea id="services" rows="3" placeholder="Ej: Wifi, Estacionamiento, Terraza..." class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none">${state.formData.services}</textarea></div><div><label class="block text-sm font-bold text-gray-700 mb-2 form-label-icon"><i class="fas fa-map-marked-alt text-yellow-600"></i><span>Ubicación en Mapa (Opcional)</span></label><p class="text-xs text-gray-600 mb-3">Ajusta el mapa con zoom. Si no lo ajustas, se usa León centro.</p><div id="map-selector" class="map-selector"></div></div></div><label class="flex items-start gap-4 p-5 bg-yellow-500/10 rounded-2xl cursor-pointer border-2 border-yellow-500/30 hover:border-yellow-500/50 transition-all group"><input type="checkbox" id="agreed" ${state.formData.agreed ? 'checked' : ''} class="w-6 h-6 mt-1 rounded-lg border-2 border-yellow-600 bg-white text-yellow-600 focus:ring-yellow-500"><div class="flex-1"><p class="font-semibold text-yellow-700 group-hover:text-yellow-800"><i class="fas fa-shield-check mr-2"></i>Confirmo que los datos son correctos</p><p class="text-sm text-gray-600 mt-1">La información será visible para todos</p></div></label><div class="flex flex-col sm:flex-row gap-4 pt-4"><button type="button" onclick="changeView('list')" class="flex-1 py-4 gradient-red text-white rounded-xl font-bold transition-all hover:scale-105 hover:shadow-xl"><i class="fas fa-times mr-2"></i>Cancelar</button><button type="submit" class="flex-1 gradient-green text-white py-4 rounded-xl font-bold shadow-lg hover:scale-105 hover:shadow-xl transition-all"><i class="fas fa-save mr-2"></i>Guardar Negocio</button></div></form></div></div>${Footer()}</div>`;
         };
 
         const ListView = () => {
@@ -562,7 +531,7 @@
             const displayDays = b.days === 'Otro' && b.custom_days ? b.custom_days : b.days;
             const daysClass = (b.days === 'No definido' || !b.days) ? 'text-red-strong' : 'text-gray-900';
             const hoursClass = (b.hours === 'No definido' || !b.hours) ? 'text-red-strong' : 'text-gray-900';
-            return `<div class="pb-20 sm:pb-28 min-h-screen">${Header()}<div class="max-w-5xl mx-auto mt-6 sm:mt-10 px-4 sm:px-6"><div class="glass overflow-hidden shadow-2xl fade-in border-2 border-yellow-500/20"><div class="profile-header-container relative overflow-hidden px-4 sm:px-8 pt-4 sm:pt-6 pb-4 sm:pb-6 shine"><div class="absolute inset-0 bg-black/5"></div><button onclick="state.view='list'; render();" class="back-button absolute top-6 left-6 w-12 h-12 flex items-center justify-center text-white hover:bg-white/40 transition-all shadow-lg z-10"><i class="fas fa-arrow-left text-xl"></i></button><div class="relative z-10 mt-8"><div class="flex flex-col md:flex-row items-center md:items-start gap-3 mb-3"><div class="p-2 glass shadow-2xl flex-shrink-0"><img src="${b.logo_url || 'https://via.placeholder.com/200/d4af37/000000?text=Logo'}" class="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl object-cover" onerror="this.src='https://via.placeholder.com/200/d4af37/000000?text=Logo'"></div><div class="flex-1 text-center md:text-left mt-1"><h2 class="text-2xl sm:text-3xl font-bold business-name-white mb-2 drop-shadow-sm">${b.name}</h2>${b.category ? `<span class="inline-block px-4 py-2 bg-white/30 backdrop-blur-sm rounded-full text-sm font-bold text-gray-900 shadow-lg"><i class="fas fa-tag mr-2"></i>${b.category}</span>` : ''}</div></div></div>${state.user && b.user_id === state.user.id ? `<div class="absolute top-6 right-6 z-10"><button onclick="deleteBusiness('${b.id}')" class="px-4 sm:px-6 py-3 sm:py-4 gradient-red text-white rounded-2xl font-bold transition-all shadow-lg hover:scale-105"><i class="fas fa-trash mr-2"></i><span class="hidden sm:inline">Eliminar</span></button></div>` : ''}</div>${b.rating > 0 ? `<div class="px-4 sm:px-8 py-5"><div class="max-w-3xl mx-auto"><div class="rating-container-profile flex items-center justify-center gap-4"><i class="fas fa-star text-yellow-400 text-3xl"></i><div><p class="text-4xl font-bold text-white">${b.rating}</p><p class="text-sm text-white/90">${b.total_ratings} ${b.total_ratings === 1 ? 'reseña' : 'reseñas'}</p></div></div></div></div>` : ''}<div class="px-4 sm:px-8 py-6 sm:py-8">${b.description ? `<div class="mb-6"><div class="section-card-gold-border p-6 sm:p-8 shadow-lg gradient-yellow-white-soft"><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-3 form-label-icon"><i class="fas fa-info-circle"></i><span>Descripción</span></h4><p class="text-gray-900 font-bold leading-relaxed description-text text-base sm:text-lg">${b.description}</p></div></div>` : ''}${b.services ? `<div class="mb-6"><div class="section-card-gold-border p-6 sm:p-8 shadow-lg"><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-3 form-label-icon"><i class="fas fa-list-ul"></i><span>Servicios</span></h4><p class="text-gray-900 font-bold leading-relaxed description-text text-base sm:text-lg">${b.services}</p></div></div>` : ''}<div class="info-container-white mb-8"><div class="space-y-5"><section><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-4 form-label-icon"><i class="fas fa-info-circle"></i><span>Contacto</span></h4><div class="space-y-3">${b.phone ? `<div class="section-card-gold-border flex items-center gap-4 p-4"><div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-phone icon-phone text-xl"></i></div><div class="flex-1 min-w-0"><p class="text-xs text-gray-500 mb-1">Teléfono</p><p class="font-semibold text-gray-900 break-all">${b.phone}</p></div></div>` : ''}${b.address ? `<div class="section-card-gold-border flex items-start gap-4 p-4"><div class="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marked-alt icon-map text-xl"></i></div><div class="flex-1 min-w-0"><p class="text-xs text-gray-500 mb-1">Dirección</p><p class="font-semibold text-gray-900 break-words">${b.address}, León, Gto.</p></div></div>` : ''}${b.phone ? `<button onclick="openWhatsApp('${b.phone}', '${b.name.replace(/'/g, "\\'")}' )" class="w-full whatsapp-button text-white py-4 rounded-xl font-bold shadow-lg transition-all flex items-center justify-center gap-3 hover:scale-105"><i class="fab fa-whatsapp text-2xl"></i><span>Contactar por WhatsApp</span></button>` : ''}</div></section>${b.representative ? `<section><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-4 form-label-icon"><i class="fas fa-user-tie"></i><span>Representante</span></h4><div class="section-card-gold-border p-6"><p class="font-semibold text-gray-900 break-words">${b.representative}</p></div></section>` : ''}<section><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-4 form-label-icon"><i class="fas fa-clock"></i><span>Horario</span></h4><div class="section-card-gold-border p-6 space-y-3"><div class="flex items-center justify-between py-2 border-b border-gray-300"><span class="text-gray-600 font-medium">Días</span><span class="font-bold ${daysClass} text-right break-words ml-4">${displayDays}</span></div><div class="flex items-center justify-between py-2"><span class="text-gray-600 font-medium">Horario</span><span class="font-bold ${hoursClass} text-right break-words ml-4">${b.hours || 'No definido'}</span></div></div></section><section><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-4 form-label-icon"><i class="fas fa-map-marked-alt"></i><span>Mapa</span></h4><div class="section-card-gold-border overflow-hidden"><div id="business-map" class="map-container"></div></div></section></div></div>${state.user ? `<div class="glass-light p-6 sm:p-8 border-2 border-yellow-500/20 mb-8"><h4 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6"><i class="fas fa-star text-yellow-600 mr-2"></i>Deja tu opinión</h4><form onsubmit="handleReview(event, '${b.id}')" class="space-y-6"><div><label class="block text-sm font-bold text-gray-700 mb-3">Calificación *</label><div class="flex gap-2 sm:gap-3 justify-center">${[1,2,3,4,5].map(i => `<button type="button" onclick="selectRating(${i})" class="star-btn text-4xl sm:text-5xl transition-all hover:scale-125" data-rating="${i}"><span class="${state.selectedRating >= i ? 'text-yellow-500' : 'text-gray-400'}">★</span></button>`).join('')}</div></div><div><label class="block text-sm font-bold text-gray-700 mb-3">Comentario (opcional)</label><textarea id="review-comment" rows="4" placeholder="Comparte tu experiencia..." class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none"></textarea></div><div class="flex justify-center"><button type="submit" class="gradient-green text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:scale-105 transition-all"><i class="fas fa-paper-plane mr-2"></i>Publicar Reseña</button></div></form></div>` : `<div class="glass-light p-8 text-center mb-8 border-2 border-gray-300"><i class="fas fa-lock text-4xl text-gray-400 mb-4"></i><p class="text-gray-600 mb-4">Inicia sesión para dejar tu reseña</p><button onclick="changeView('login')" class="btn-gold text-black px-8 py-3 rounded-xl font-bold shadow-xl hover:scale-105 transition-all">Iniciar Sesión</button></div>`}<div class="border-t-2 border-gray-300 pt-8"><h4 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6"><i class="fas fa-comments text-yellow-600 mr-2"></i>Reseñas (${b.reviews?.length || 0})</h4>${(b.reviews && b.reviews.length > 0) ? `<div class="space-y-4">${b.reviews.map(r => `<div class="glass-light p-4 sm:p-6 hover:shadow-xl transition-all"><div class="flex items-start justify-between mb-3"><div class="flex items-center gap-3"><div class="w-10 h-10 sm:w-12 sm:h-12 gradient-gold rounded-full flex items-center justify-center text-black font-bold text-base sm:text-lg flex-shrink-0">${r.user_name.charAt(0).toUpperCase()}</div><div><p class="font-bold text-gray-900 break-words">${r.user_name}</p><p class="text-xs text-gray-500">${new Date(r.created_at).toLocaleDateString('es-MX')}</p></div></div><div class="flex gap-1 text-yellow-500 text-lg sm:text-xl flex-shrink-0 ml-2">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</div></div>${r.comment ? `<p class="text-gray-700 leading-relaxed break-words">${r.comment}</p>` : ''}</div>`).join('')}</div>` : `<div class="text-center py-12 glass-light"><i class="fas fa-inbox text-6xl text-gray-300 mb-4"></i><p class="text-gray-600">Aún no hay reseñas</p><p class="text-gray-500 text-sm mt-2">Sé el primero</p></div>`}</div></div></div></div>${Footer()}</div>`;
+            return `<div class="pb-20 sm:pb-28 min-h-screen profile-bg-yellow">${Header()}<div class="max-w-5xl mx-auto mt-6 sm:mt-10 px-4 sm:px-6"><div class="glass overflow-hidden shadow-2xl fade-in border-2 border-yellow-500/30"><div class="profile-header-container relative overflow-hidden px-4 sm:px-8 pt-4 sm:pt-6 pb-4 sm:pb-6 shine"><div class="absolute inset-0 bg-black/5"></div><button onclick="state.view='list'; render();" class="back-button absolute top-6 left-6 w-12 h-12 flex items-center justify-center text-white hover:bg-white/40 transition-all shadow-lg z-10"><i class="fas fa-arrow-left text-xl"></i></button><div class="relative z-10 mt-8"><div class="flex flex-col md:flex-row items-center md:items-start gap-3 mb-3"><div class="p-2 glass shadow-2xl flex-shrink-0 rounded-3xl"><img src="${b.logo_url || 'https://via.placeholder.com/200/d4af37/000000?text=Logo'}" class="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl object-cover" onerror="this.src='https://via.placeholder.com/200/d4af37/000000?text=Logo'"></div><div class="flex-1 text-center md:text-left mt-1"><h2 class="text-2xl sm:text-3xl font-bold business-name-white mb-2 drop-shadow-sm">${b.name}</h2>${b.category ? `<span class="inline-block px-4 py-2 bg-white/30 backdrop-blur-sm rounded-full text-sm font-bold text-gray-900 shadow-lg"><i class="fas fa-tag mr-2"></i>${b.category}</span>` : ''}</div></div></div>${state.user && b.user_id === state.user.id ? `<div class="absolute top-6 right-6 z-10"><button onclick="deleteBusiness('${b.id}')" class="px-4 sm:px-6 py-3 sm:py-4 gradient-red text-white rounded-2xl font-bold transition-all shadow-lg hover:scale-105"><i class="fas fa-trash mr-2"></i><span class="hidden sm:inline">Eliminar</span></button></div>` : ''}</div>${b.rating > 0 ? `<div class="px-4 sm:px-8 py-5"><div class="max-w-3xl mx-auto"><div class="rating-container-profile flex items-center justify-center gap-4"><i class="fas fa-star text-yellow-400 text-3xl"></i><div><p class="text-4xl font-bold text-white">${b.rating}</p><p class="text-sm text-white/90">${b.total_ratings} ${b.total_ratings === 1 ? 'reseña' : 'reseñas'}</p></div></div></div></div>` : ''}<div class="px-4 sm:px-8 py-6 sm:py-8">${b.description ? `<div class="mb-6"><div class="section-card p-6 sm:p-8 shadow-lg gradient-yellow-pale"><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-3 form-label-icon"><i class="fas fa-info-circle"></i><span>Descripción</span></h4><p class="text-gray-900 font-bold leading-relaxed description-text text-base sm:text-lg">${b.description}</p></div></div>` : ''}${b.services ? `<div class="mb-6"><div class="section-card p-6 sm:p-8 shadow-lg"><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-3 form-label-icon"><i class="fas fa-list-ul"></i><span>Servicios</span></h4><p class="text-gray-900 font-bold leading-relaxed description-text text-base sm:text-lg">${b.services}</p></div></div>` : ''}<div class="info-container-white mb-8"><div class="space-y-5"><section><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-4 form-label-icon"><i class="fas fa-info-circle"></i><span>Contacto</span></h4><div class="space-y-3">${b.phone ? `<div class="section-card flex items-center gap-4 p-4"><div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-phone icon-phone text-xl"></i></div><div class="flex-1 min-w-0"><p class="text-xs text-gray-500 mb-1">Teléfono</p><p class="font-semibold text-gray-900 break-all">${b.phone}</p></div></div>` : ''}${b.address ? `<div class="section-card flex items-start gap-4 p-4"><div class="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marked-alt icon-map text-xl"></i></div><div class="flex-1 min-w-0"><p class="text-xs text-gray-500 mb-1">Dirección</p><p class="font-semibold text-gray-900 break-words">${b.address}, León, Gto.</p></div></div>` : ''}${b.phone ? `<button onclick="openWhatsApp('${b.phone}', '${b.name.replace(/'/g, "\\'")}' )" class="w-full whatsapp-button text-white py-4 rounded-2xl font-bold shadow-lg transition-all flex items-center justify-center gap-3 hover:scale-105"><i class="fab fa-whatsapp text-2xl"></i><span>Contactar por WhatsApp</span></button>` : ''}</div></section>${b.representative ? `<section><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-4 form-label-icon"><i class="fas fa-user-tie"></i><span>Representante</span></h4><div class="section-card p-6"><p class="font-semibold text-gray-900 break-words">${b.representative}</p></div></section>` : ''}<section><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-4 form-label-icon"><i class="fas fa-clock"></i><span>Horario</span></h4><div class="section-card p-6 space-y-3"><div class="flex items-center justify-between py-2 border-b border-gray-300"><span class="text-gray-600 font-medium">Días</span><span class="font-bold ${daysClass} text-right break-words ml-4">${displayDays}</span></div><div class="flex items-center justify-between py-2"><span class="text-gray-600 font-medium">Horario</span><span class="font-bold ${hoursClass} text-right break-words ml-4">${b.hours || 'No definido'}</span></div></div></section><section><h4 class="text-sm title-gold-dark uppercase tracking-wider mb-4 form-label-icon"><i class="fas fa-map-marked-alt"></i><span>Mapa</span></h4><div class="section-card overflow-hidden p-2"><div id="business-map" class="map-container"></div></div></section></div></div>${state.user ? `<div class="section-card p-6 sm:p-8 mb-8"><h4 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6"><i class="fas fa-star text-yellow-600 mr-2"></i>Deja tu opinión</h4><form onsubmit="handleReview(event, '${b.id}')" class="space-y-6"><div><label class="block text-sm font-bold text-gray-700 mb-3">Calificación *</label><div class="flex gap-2 sm:gap-3 justify-center">${[1,2,3,4,5].map(i => `<button type="button" onclick="selectRating(${i})" class="star-btn text-4xl sm:text-5xl transition-all hover:scale-125" data-rating="${i}"><span class="${state.selectedRating >= i ? 'text-yellow-500' : 'text-gray-400'}">★</span></button>`).join('')}</div></div><div><label class="block text-sm font-bold text-gray-700 mb-3">Comentario (opcional)</label><textarea id="review-comment" rows="4" placeholder="Comparte tu experiencia..." class="w-full px-4 py-3 border-2 border-gray-300 bg-white text-gray-900 rounded-xl focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 outline-none input-focus resize-none"></textarea></div><div class="flex justify-center"><button type="submit" class="gradient-green text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:scale-105 transition-all"><i class="fas fa-paper-plane mr-2"></i>Publicar Reseña</button></div></form></div>` : `<div class="section-card p-8 text-center mb-8"><i class="fas fa-lock text-4xl text-gray-400 mb-4"></i><p class="text-gray-600 mb-4">Inicia sesión para dejar tu reseña</p><button onclick="changeView('login')" class="btn-gold text-black px-8 py-3 rounded-xl font-bold shadow-xl hover:scale-105 transition-all">Iniciar Sesión</button></div>`}<div class="border-t-2 border-yellow-500/30 pt-8"><h4 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6"><i class="fas fa-comments text-yellow-600 mr-2"></i>Reseñas (${b.reviews?.length || 0})</h4>${(b.reviews && b.reviews.length > 0) ? `<div class="space-y-4">${b.reviews.map(r => `<div class="section-card p-4 sm:p-6 hover:shadow-xl transition-all"><div class="flex items-start justify-between mb-3"><div class="flex items-center gap-3"><div class="w-10 h-10 sm:w-12 sm:h-12 gradient-gold rounded-full flex items-center justify-center text-black font-bold text-base sm:text-lg flex-shrink-0">${r.user_name.charAt(0).toUpperCase()}</div><div><p class="font-bold text-gray-900 break-words">${r.user_name}</p><p class="text-xs text-gray-500">${new Date(r.created_at).toLocaleDateString('es-MX')}</p></div></div><div class="flex gap-1 text-yellow-500 text-lg sm:text-xl flex-shrink-0 ml-2">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</div></div>${r.comment ? `<p class="text-gray-700 leading-relaxed break-words">${r.comment}</p>` : ''}</div>`).join('')}</div>` : `<div class="text-center py-12 section-card"><i class="fas fa-inbox text-6xl text-gray-300 mb-4"></i><p class="text-gray-600">Aún no hay reseñas</p><p class="text-gray-500 text-sm mt-2">Sé el primero</p></div>`}</div></div></div></div>${Footer()}</div>`;
         };
 
         async function handleAuth(e) {
@@ -616,20 +585,29 @@
         function handleLogo(e) {
             const file = e.target.files[0];
             if (!file) return;
-            if (file.size > 10 * 1024 * 1024) { showModal('Archivo Grande', 'Máx. 10MB', 'error'); e.target.value = ''; return; }
+            if (file.size > 10 * 1024 * 1024) { 
+                showModal('Archivo Grande', 'Máx. 10MB', 'error'); 
+                e.target.value = ''; 
+                return; 
+            }
             state.formData.logo = file;
             const reader = new FileReader();
-            reader.onload = (event) => { state.formData.logo_url = event.target.result; render(); };
+            reader.onload = (event) => { 
+                state.formData.logo_url = event.target.result; 
+                render(); 
+            };
             reader.readAsDataURL(file);
         }
 
         async function handleBusinessSubmit(e) {
             e.preventDefault();
-            console.log('📝 Formulario enviado');
             
             const phoneInput = document.getElementById('phone').value.trim();
             const phoneDigits = phoneInput.replace(/\D/g, '');
-            if (phoneInput !== phoneDigits) { showModal('Error', 'Solo números en teléfono.', 'error'); return; }
+            if (phoneInput !== phoneDigits) { 
+                showModal('Error', 'Solo números en teléfono.', 'error'); 
+                return; 
+            }
             
             state.formData.name = document.getElementById('name').value.trim().toUpperCase();
             state.formData.representative = document.getElementById('representative').value.trim();
@@ -643,25 +621,18 @@
             state.formData.services = document.getElementById('services').value.trim();
             state.formData.agreed = document.getElementById('agreed').checked;
             
-            console.log('📋 Datos capturados:', state.formData);
-            
             await saveBusiness(state.formData);
         }
 
         async function handleReview(e, businessId) {
             e.preventDefault();
-            console.log('📝 Formulario de reseña enviado');
-            console.log('⭐ Rating seleccionado:', state.selectedRating);
             
             if (!state.selectedRating || state.selectedRating === 0) { 
-                console.error('❌ Rating no válido:', state.selectedRating);
-                showModal('Calificación Requerida', 'Por favor selecciona una calificación de 1 a 5 estrellas', 'warning'); 
+                showModal('Calificación Requerida', 'Selecciona de 1 a 5 estrellas', 'warning'); 
                 return; 
             }
             
             const comment = document.getElementById('review-comment')?.value.trim() || '';
-            console.log('💬 Comentario:', comment);
-            
             await saveReview(businessId, state.selectedRating, comment);
         }
 
@@ -673,16 +644,29 @@
         }
 
         function selectRating(rating) {
-            console.log('⭐ Rating seleccionado:', rating);
             state.selectedRating = rating;
             render();
         }
 
-        function changeView(view) { state.view = view; if (view === 'list') { state.searchTerm = ''; state.tempSearchTerm = ''; } render(); }
+        function changeView(view) { 
+            state.view = view; 
+            if (view === 'list') { 
+                state.searchTerm = ''; 
+                state.tempSearchTerm = ''; 
+            } 
+            render(); 
+        }
 
         function createBusiness() {
-            if (!state.user) { showModal('Sesión Requerida', 'Inicia sesión primero', 'warning'); changeView('login'); return; }
-            resetForm(); state.currentBusiness = null; state.view = 'form'; render();
+            if (!state.user) { 
+                showModal('Sesión Requerida', 'Inicia sesión primero', 'warning'); 
+                changeView('login'); 
+                return; 
+            }
+            resetForm(); 
+            state.currentBusiness = null; 
+            state.view = 'form'; 
+            render();
         }
 
         function editBusiness(id) {
@@ -715,7 +699,10 @@
         function viewBusiness(id) {
             const business = state.businesses.find(b => b.id === id);
             if (!business) return;
-            state.currentBusiness = business; state.view = 'profile'; state.selectedRating = 0; render();
+            state.currentBusiness = business; 
+            state.view = 'profile'; 
+            state.selectedRating = 0; 
+            render();
         }
 
         function render() {
@@ -726,14 +713,17 @@
 
         (async function init() {
             try {
-                console.log('🚀 Inicializando Ubicanegoleon v2.0...');
+                console.log('🚀 Ubicanegoleon v3.0 FINAL');
                 
                 const hashParams = new URLSearchParams(window.location.hash.substring(1));
                 const type = hashParams.get('type');
-                if (type === 'recovery') { state.isPasswordReset = true; showPasswordResetModal(); return; }
+                if (type === 'recovery') { 
+                    state.isPasswordReset = true; 
+                    showPasswordResetModal(); 
+                    return; 
+                }
                 
                 const { data, error } = await supabaseClient.auth.getSession();
-                console.log('🔐 Sesión:', data.session ? 'Activa ✅' : 'Inactiva ❌');
                 
                 if (data.session) { 
                     state.user = data.session.user; 
@@ -745,7 +735,6 @@
                 render();
                 
                 supabaseClient.auth.onAuthStateChange(async (event, session) => {
-                    console.log('🔄 Evento auth:', event);
                     const currentHash = window.location.hash; 
                     const isRecoveryUrl = currentHash.includes('type=recovery');
                     
@@ -768,10 +757,10 @@
                     }
                 });
                 
-                console.log('✅ Aplicación inicializada correctamente');
+                console.log('✅ Aplicación lista');
             } catch (error) { 
-                console.error('❌ Error crítico:', error); 
-                showModal('Error', 'Error al cargar la aplicación.', 'error'); 
+                console.error('❌ Error:', error);
+                showModal('Error', 'Error al cargar.', 'error'); 
             }
         })();
     </script>
